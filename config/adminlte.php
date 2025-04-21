@@ -316,7 +316,7 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'Home',
+            'text' => 'Inicio',
             'url' => '/home',
             'icon' => 'fas fa-fw fa-home',
         ],
