@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'SIGGER',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>SIGGER</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -316,26 +316,47 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
-        ], 
-        [
             'text' => 'Home',
-            'url' => 'admin/home',
+            'url' => '/home',
             'icon' => 'fas fa-fw fa-home',
+        ],
+        [
+            'text' => 'Transito',
+            'url' => '/transito',
+            'icon' => 'fa fa-car',
+        ],
+        [
+            'text' => 'No transito',
+            'url' => '/notransito',
+            'icon' => 'fa fa-directions_walk',
+        ],
+        [
+            'text' => 'In vivo',
+            'url' => '/invivo',
+            'icon' => 'fa fa-male',
+        ],
+        [
+            'text' => 'Post-mortem',
+            'url' => '/postmortem',
+            'icon' => 'far fa-user fa-fw',
         ],
         ['header' => 'CONFIGURACIÓN DE USUARIO'],
         [
             'text' => 'Usuarios',
-            'url' => 'admin/usuarios',
-            'icon' => 'far fa-fw fa-user',
+            'url' => '/usuarios',
+            'icon' => 'far fa-users fa-fw',
         ],
         [
             'text' => 'Permisos',
-            'url' => 'admin/permisos',
+            'url' => '/permisos',
             'icon' => 'fas fa-user-check',
-        ],/* 
+        ],
+        [
+            'text' => 'Roles',
+            'url' => '/roles',
+            'icon' => 'fas fa-user-check',
+        ],
+        /* 
         [
             'text' => 'change_password',
             'url' => 'admin/settings',

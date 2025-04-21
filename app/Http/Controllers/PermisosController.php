@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Permisos;
 use Illuminate\Http\Request;
-use App\Http\Controllers\UserController;    
-use Spatie\Permission\Models\Permission;
-use Illuminate\Container\Attributes\DB;
 
-class RolController extends Controller
+class PermisosController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('permisos.index');
     }
 
     /**
