@@ -178,6 +178,7 @@ return [
     'classes_auth_icon' => '',
     'classes_auth_btn' => 'btn-flat btn-primary',
 
+
     /*
     |--------------------------------------------------------------------------
     | Admin Panel Classes
@@ -198,7 +199,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -215,7 +216,7 @@ return [
     */
 
     'sidebar_mini' => 'lg',
-    'sidebar_collapse' => false,
+    'sidebar_collapse' => true,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
@@ -328,11 +329,13 @@ return [
                 [
                     'text' => 'Transito',
                     'url' => '/transito',
+                    'shift' => 'ml-4',
                     'icon' => 'fa fa-car',
                 ],
                 [
                     'text' => 'No transito',
                     'url' => '/notransito',
+                    'shift' => 'ml-4',
                     'icon' => 'fa fa-directions_walk',
                 ],
             ],
