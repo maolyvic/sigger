@@ -64,11 +64,11 @@ return [
     */
 
     'logo' => '<b>SIGGER</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img' => 'img/senamecf.jpg',
+    'logo_img_class' => 'brand-image  elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+    'logo_img_alt' => 'SENAMECF',
 
     /*
     |--------------------------------------------------------------------------
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'img/senamecf.jpg',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -321,14 +321,21 @@ return [
             'icon' => 'fas fa-fw fa-home',
         ],
         [
-            'text' => 'Transito',
-            'url' => '/transito',
-            'icon' => 'fa fa-car',
-        ],
-        [
-            'text' => 'No transito',
-            'url' => '/notransito',
-            'icon' => 'fa fa-directions_walk',
+            'text' => 'Causa de muerte',
+            'icon' => 'fas fa-fw fa-skull-crossbones',
+            'icon_color' => 'red',
+            'submenu' => [
+                [
+                    'text' => 'Transito',
+                    'url' => '/transito',
+                    'icon' => 'fa fa-car',
+                ],
+                [
+                    'text' => 'No transito',
+                    'url' => '/notransito',
+                    'icon' => 'fa fa-directions_walk',
+                ],
+            ],
         ],
         [
             'text' => 'In vivo',
