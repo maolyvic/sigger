@@ -341,14 +341,22 @@ return [
             ],
         ],
         [
-            'text' => 'In vivo',
-            'url' => '/invivo',
-            'icon' => 'fa fa-male',
-        ],
-        [
-            'text' => 'Post-mortem',
-            'url' => '/postmortem',
-            'icon' => 'far fa-user fa-fw',
+            'text' => 'Evaluaciones',
+            'icon' => 'fas fa-notes-medical',
+            'submenu' => [
+                [
+                    'text' => 'In vivo',
+                    'url' => '/invivo',
+                    'shift' => 'ml-4',
+                    'icon' => 'fa fa-male',
+                ],
+                [
+                    'text' => 'Post-mortem',
+                    'url' => '/postmortem',
+                    'shift' => 'ml-4',
+                    'icon' => 'far fa-user fa-fw',
+                ],
+            ],
         ],
         ['header' => 'CONFIGURACIÓN DE USUARIO'],
         [
