@@ -47,7 +47,5 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    // ONE - TO - MANY
 
-    public function 
 }
