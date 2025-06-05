@@ -336,7 +336,7 @@ return [
                     'text' => 'No transito',
                     'url' => '/notransito',
                     'shift' => 'ml-4',
-                    'icon' => 'fa fa-directions_walk',
+                    'icon' => 'fa fa fa-male',
                 ],
             ],
         ],
