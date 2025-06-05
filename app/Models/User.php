@@ -46,9 +46,4 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-<<<<<<< HEAD
-
 }
-=======
-}
->>>>>>> bb83f52f88539c25fcdfa3b60c2fca591acc781c

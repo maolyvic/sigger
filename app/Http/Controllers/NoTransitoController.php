@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NoTransito;
+use App\Models\CausaMuerte;
 use Illuminate\Http\Request;
 
 class NoTransitoController extends Controller
