@@ -12,7 +12,7 @@ use App\Http\Controllers\ReporteController;
 use App\Http\Controllers\PermisosController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Auth::routes();

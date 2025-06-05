@@ -64,11 +64,11 @@ return [
     */
 
     'logo' => '<b>SIGGER</b>',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img' => 'img/senamecf.jpg',
+    'logo_img_class' => 'brand-image  elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+    'logo_img_alt' => 'SENAMECF',
 
     /*
     |--------------------------------------------------------------------------
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'img/senamecf.jpg',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -178,6 +178,7 @@ return [
     'classes_auth_icon' => '',
     'classes_auth_btn' => 'btn-flat btn-primary',
 
+
     /*
     |--------------------------------------------------------------------------
     | Admin Panel Classes
@@ -198,7 +199,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -215,7 +216,7 @@ return [
     */
 
     'sidebar_mini' => 'lg',
-    'sidebar_collapse' => false,
+    'sidebar_collapse' => true,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
@@ -300,45 +301,62 @@ return [
 
     'menu' => [
         // Navbar items:
-        [
-            'type' => 'navbar-search',
-            'text' => 'search',
-            'topnav_right' => true,
-        ],
+        // [
+        //     'type' => 'navbar-search',
+        //     'text' => 'search',
+        //     'topnav_right' => true,
+        // ],
         [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
         // Sidebar items:
+        // [
+        //     'type' => 'sidebar-menu-search',
+        //     'text' => 'search',
+        // ],
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'Home',
+            'text' => 'Inicio',
             'url' => '/home',
             'icon' => 'fas fa-fw fa-home',
         ],
         [
-            'text' => 'Transito',
-            'url' => '/transito',
-            'icon' => 'fa fa-car',
+            'text' => 'Causa de muerte',
+            'icon' => 'fas fa-fw fa-skull-crossbones',
+            'icon_color' => 'red',
+            'submenu' => [
+                [
+                    'text' => 'Transito',
+                    'url' => '/transito',
+                    'shift' => 'ml-4',
+                    'icon' => 'fa fa-car',
+                ],
+                [
+                    'text' => 'No transito',
+                    'url' => '/notransito',
+                    'shift' => 'ml-4',
+                    'icon' => 'fa fa-directions_walk',
+                ],
+            ],
         ],
         [
-            'text' => 'No transito',
-            'url' => '/notransito',
-            'icon' => 'fa fa-directions_walk',
-        ],
-        [
-            'text' => 'In vivo',
-            'url' => '/invivo',
-            'icon' => 'fa fa-male',
-        ],
-        [
-            'text' => 'Post-mortem',
-            'url' => '/postmortem',
-            'icon' => 'far fa-user fa-fw',
+            'text' => 'Evaluaciones',
+            'icon' => 'fas fa-notes-medical',
+            'submenu' => [
+                [
+                    'text' => 'In vivo',
+                    'url' => '/invivo',
+                    'shift' => 'ml-4',
+                    'icon' => 'fa fa-male',
+                ],
+                [
+                    'text' => 'Post-mortem',
+                    'url' => '/postmortem',
+                    'shift' => 'ml-4',
+                    'icon' => 'far fa-user fa-fw',
+                ],
+            ],
         ],
         ['header' => 'CONFIGURACIÓN DE USUARIO'],
         [
@@ -473,7 +491,7 @@ return [
             ],
         ],
         'Chartjs' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
