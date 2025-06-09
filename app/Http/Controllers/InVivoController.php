@@ -2,14 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\InVivo;
+use App\Models\InVivo; // Importar el modelo
 use Illuminate\Http\Request;
 
 class InVivoController extends Controller
 {
     public function index()
     {
-        return view('invivo.index');
+        // Usar el modelo para obtener los datos
+        $invivos = InVivo::select(
+            'id', 
+            'reconocimiento_medico', 
+            'toxicologico', 
+            'diagnostico_mental', 
+            'odontologia', 
+            'antropologia', 
+            'radiologia_forense', 
+            'vagino_rectal', 
+            'fijaciones_fotograficas', 
+            'huellas_mordeduras', 
+            'examen_histologico', 
+            'examen_citologico'
+        )->get();
+
+        return view('invivo.index', compact('invivos'));
     }
 
     /**
