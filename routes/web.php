@@ -10,6 +10,7 @@ use App\Http\Controllers\InVivoController;
 use App\Http\Controllers\PostmortemController;
 use App\Http\Controllers\ReporteController;
 use App\Http\Controllers\PermisosController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return redirect()->route('login');
