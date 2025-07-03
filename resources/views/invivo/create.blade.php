@@ -42,67 +42,67 @@
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="reconocimiento_medico">Reconocimiento medico</label>
-                                    <input type="text" name="reconocimiento_medico" class="form-control" id="reconocimiento_medico">
+                                    <input type="number" name="reconocimiento_medico" class="form-control" id="reconocimiento_medico">
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="toxicologico">Toxicologico</label>
-                                    <input type="text" name="toxicologico" class="form-control" id="toxicologico">
+                                    <input type="number" name="toxicologico" class="form-control" id="toxicologico">
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="diagnostico_mental">Diagnostico mental</label>
-                                    <input type="text" name="diagnostico_mental" class="form-control" id="diagnostico_mental">
+                                    <input type="number" name="diagnostico_mental" class="form-control" id="diagnostico_mental">
                                 </div>
                             </div>
                             <div class="col-md-1">
                                 <div class="form-group">
                                     <label for="odontologia">Odontología</label>
-                                    <input type="text" name="odontologia" class="form-control" id="odontologia">
+                                    <input type="number" name="odontologia" class="form-control" id="odontologia">
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="antropologia">Antropología</label>
-                                    <input type="text" name="antropologia" class="form-control" id="antropologia">
+                                    <input type="number" name="antropologia" class="form-control" id="antropologia">
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="radiologia_forense">Radiología forense</label>
-                                    <input type="text" name="radiologia_forense" class="form-control" id="radiologia_forense">
+                                    <input type="number" name="radiologia_forense" class="form-control" id="radiologia_forense">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="vagino_rectal">Vagino Rectal</label>
-                                    <input type="text" name="vagino_rectal" class="form-control" id="vagino_rectal">
+                                    <input type="number" name="vagino_rectal" class="form-control" id="vagino_rectal">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="fijaciones_fotograficas">Fijaciones Fotográficas</label>
-                                    <input type="text" name="fijaciones_fotograficas" class="form-control" id="fijaciones_fotograficas">
+                                    <input type="number" name="fijaciones_fotograficas" class="form-control" id="fijaciones_fotograficas">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="huellas_mordeduras">Huellas Mordeduras</label>
-                                    <input type="text" name="huellas_mordeduras" class="form-control" id="huellas_mordeduras">
+                                    <input type="number" name="huellas_mordeduras" class="form-control" id="huellas_mordeduras">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="examen_histologico">Examen Histológico</label>
-                                    <input type="text" name="examen_histologico" class="form-control" id="examen_histologico">
+                                    <input type="number" name="examen_histologico" class="form-control" id="examen_histologico">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="examen_citologico">Examen Citológico</label>
-                                    <input type="text" name="examen_citologico" class="form-control" id="examen_citologico">
+                                    <input type="number" name="examen_citologico" class="form-control" id="examen_citologico">
                                 </div>
                             </div>
                         </div>
