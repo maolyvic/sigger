@@ -38,10 +38,6 @@
 
 @section('title', 'Ingresos')
 
-@section('content_header')
-    <h1>{{ __('Datos de Ingresos') }}</h1>
-@stop
-
 @section('content')
     <div class="main">
         <div class="row">
@@ -55,7 +51,7 @@
                             Nuevo</a>
                     </div>
                     <div class="card-body">
-                        <x-adminlte-datatable id="table-personas" :heads="$heads" :config="$config" striped hoverable without-buttons>
+                        <x-adminlte-datatable id="table-invivo" :heads="$heads" :config="$config" striped hoverable without-buttons>
                             @if (count($invivos) > 0)
                                 @foreach ($invivos as $invivo)
                                     <tr>
