@@ -47,6 +47,7 @@ return new class extends Migration
             $table->enum('fases_descomposicion', ['FRESCO', 'PUTREFACTO', 'OSAMENTO']);
             $table->text('observaciones')->nullable();
             $table->bigInteger('user_id')->unsigned()->notNull();
+            
             $table->timestamps();
             $table->softDeletes();
 
