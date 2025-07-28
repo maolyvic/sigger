@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
             RedipSeeder::class,
             EstadoSeeder::class,
             MunicipioSeeder::class,
+            ParroquiaSeeder::class,
         ]);
     }
 }
