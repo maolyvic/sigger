@@ -4770,6 +4770,73 @@ class SectorSeeder extends Seeder
             ['nombre' => 'TRANSITO', 'parroquia_id' => 313],
             ['nombre' => 'UE ESTADAL TINACO', 'parroquia_id' => 313],
 
+            // JUAN BAUTISTA ARISMENDI (ID: 325)
+            ['nombre' => 'LOS CARATALES', 'parroquia_id' => 325],
+            ['nombre' => 'SAN FELIX CASTILLOS', 'parroquia_id' => 325],
+
+            // SAN JOSÉ (ID: 330)
+            ['nombre' => 'ISLA TUCUPITA', 'parroquia_id' => 330],
+            ['nombre' => 'OBRERO', 'parroquia_id' => 330],
+
+            // JOSÉ VIDAL MARCANO (ID: 331)
+            ['nombre' => 'EL GUARDIA', 'parroquia_id' => 331],
+            ['nombre' => 'EL JOBO', 'parroquia_id' => 331],
+            ['nombre' => 'HACIENDA DEL MEDIO', 'parroquia_id' => 331],
+            ['nombre' => 'LA PICA DE COCUINA', 'parroquia_id' => 331],
+            ['nombre' => 'PINTO SALINAS', 'parroquia_id' => 331],
+            ['nombre' => 'VIA A PALO BLANCO', 'parroquia_id' => 331],
+            ['nombre' => 'VILLA ROSA', 'parroquia_id' => 331],
+
+            // JUAN MILLÁN (ID: 332)
+            ['nombre' => 'ISLA GUASINA', 'parroquia_id' => 332],
+            ['nombre' => 'EL CIERRE', 'parroquia_id' => 332],
+            ['nombre' => 'EL COPAL', 'parroquia_id' => 332],
+            ['nombre' => 'EL JOBITO', 'parroquia_id' => 332],
+            ['nombre' => 'C PRINCIPAL GUASINA', 'parroquia_id' => 332],
+            ['nombre' => 'CAMPO ELIAS', 'parroquia_id' => 332],
+            ['nombre' => 'CAMPO TIGRE', 'parroquia_id' => 332],
+            ['nombre' => 'CAMPO TUCUPITA', 'parroquia_id' => 332],
+            ['nombre' => 'CARRERA 1', 'parroquia_id' => 332],
+            ['nombre' => 'CARRERA 2', 'parroquia_id' => 332],
+            ['nombre' => 'CARRERA 3', 'parroquia_id' => 332],
+            ['nombre' => 'GUABINA', 'parroquia_id' => 332],
+            ['nombre' => 'LA PINEDA', 'parroquia_id' => 332],
+            ['nombre' => 'LOS CHAGUARAMOS', 'parroquia_id' => 332],
+            ['nombre' => 'SANTA CRUZ', 'parroquia_id' => 332],
+
+            // LEONARDO RUÍZPINEDA PALOMA (ID: 333)
+            ['nombre' => 'C 1', 'parroquia_id' => 333],
+            ['nombre' => 'C 2', 'parroquia_id' => 333],
+            ['nombre' => 'C PRINCIPAL GUASINA', 'parroquia_id' => 333],
+            ['nombre' => 'CAMPO ELIAS', 'parroquia_id' => 333],
+            ['nombre' => 'CAMPO TEXAS', 'parroquia_id' => 333],
+            ['nombre' => 'CAMPO TUCUPITA', 'parroquia_id' => 333],
+            ['nombre' => 'CARRERA 1', 'parroquia_id' => 333],
+            ['nombre' => 'CARRERA 2', 'parroquia_id' => 333],
+            ['nombre' => 'CARRERA 3', 'parroquia_id' => 333],
+            ['nombre' => 'GUASINA', 'parroquia_id' => 333],
+            ['nombre' => 'LA PINEDA', 'parroquia_id' => 333],
+            ['nombre' => 'LOS CHAGUARAMOS', 'parroquia_id' => 333],
+            ['nombre' => 'SANTA CRUZ', 'parroquia_id' => 333],
+
+            // MARISCAL ANTONIO JOSÉ DE SUCRE (ID: 334)
+            ['nombre' => 'EL PALOMAR', 'parroquia_id' => 334],
+            ['nombre' => 'LA MANGA', 'parroquia_id' => 334],
+
+            // MONSEÑOR ARGIMIRO GARCÍA (ID: 335)
+            ['nombre' => 'ANDRES ELOY BLANCO', 'parroquia_id' => 335],
+            ['nombre' => 'CANO MANAMO', 'parroquia_id' => 335],
+            ['nombre' => 'LA PERIMETRAL', 'parroquia_id' => 335],
+            ['nombre' => 'LAS MALVINAS', 'parroquia_id' => 335],
+            ['nombre' => 'MARIO BRICENO IRAGORRI', 'parroquia_id' => 335],
+            ['nombre' => 'PALOMA', 'parroquia_id' => 335],
+            ['nombre' => 'URB DELFIN MENDOZA', 'parroquia_id' => 335],
+            ['nombre' => 'URB LA FUNDACION', 'parroquia_id' => 335],
+
+            // SAN RAFAEL (ID: 336)
+            ['nombre' => 'BOCA DE COCUINA', 'parroquia_id' => 336],
+            ['nombre' => 'SAN RAFAEL', 'parroquia_id' => 336],
+
             
         ];
     }
