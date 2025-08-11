@@ -12647,6 +12647,548 @@ class SectorSeeder extends Seeder
 
             // San Judas Tadeo (ID: 917)
             ['nombre' => 'PLAZA BOLIVAR', 'parroquia_id' => 917],
+
+            // El Jagüito (ID: 920)
+            ['nombre' => 'SIN SECTOR', 'parroquia_id' => 920],
+
+            // Santa Isabel (ID: 922)
+            ['nombre' => 'SANTA ISABEL', 'parroquia_id' => 922],
+
+            // Boconó (ID: 923)
+            ['nombre' => 'CANCHA DEPORTIVA', 'parroquia_id' => 923],
+            ['nombre' => 'E/S PDV', 'parroquia_id' => 923],
+            ['nombre' => 'FARM LA TRINIDAD', 'parroquia_id' => 923],
+            ['nombre' => 'HOSP RAFAEL RANGEL DE BOCONO', 'parroquia_id' => 923],
+            ['nombre' => 'MUSEO TRAPICHE DE LOS CLAVOS', 'parroquia_id' => 923],
+            ['nombre' => 'PARQ DE RECREACION DOCTOR EUGENIO BATISTA', 'parroquia_id' => 923],
+            ['nombre' => 'PLAZA DOCTOR RAFAEL MARIA HERNANDEZ', 'parroquia_id' => 923],
+            ['nombre' => 'TERM PASAJEROS', 'parroquia_id' => 923],
+            ['nombre' => 'URB EL SAMAN I', 'parroquia_id' => 923],
+
+            // El Carmen (ID: 924)
+            ['nombre' => 'CEMENTERIO', 'parroquia_id' => 924],
+            ['nombre' => 'EB DOCTOR LEONARDO RUIZ PINEDA', 'parroquia_id' => 924],
+            ['nombre' => 'EB MONSENOR MEJIA', 'parroquia_id' => 924],
+            ['nombre' => 'E/S PDV', 'parroquia_id' => 924],
+            ['nombre' => 'EL TENDAL', 'parroquia_id' => 924],
+            ['nombre' => 'ESCUELA MITICUN', 'parroquia_id' => 924],
+            ['nombre' => 'FARM ALDEA DE LOS MUCHACHOS', 'parroquia_id' => 924],
+            ['nombre' => 'IPASME', 'parroquia_id' => 924],
+            ['nombre' => 'MITICUN', 'parroquia_id' => 924],
+            ['nombre' => 'PISTA DEL AERP DE BOCONO', 'parroquia_id' => 924],
+            ['nombre' => 'REST PIZZERIA', 'parroquia_id' => 924],
+            ['nombre' => 'URB DONA MENCA', 'parroquia_id' => 924],
+            ['nombre' => 'URB EL CAFETAL', 'parroquia_id' => 924],
+            ['nombre' => 'URB LOS PANTANITOS', 'parroquia_id' => 924],
+
+            // Monseñor Jáuregui (ID: 931)
+            ['nombre' => 'NIQUITAO', 'parroquia_id' => 931],
+
+            // Sabana Grande (ID: 935)
+            ['nombre' => 'ASADERO DE CARNES EL CHACARRITO MARQUEZ', 'parroquia_id' => 935],
+            ['nombre' => 'CEMENTERIO B', 'parroquia_id' => 935],
+            ['nombre' => 'EBB MARCELINO ZAMBRANO', 'parroquia_id' => 935],
+            ['nombre' => 'IGLESIA SAN BENITO DE PALERMO', 'parroquia_id' => 935],
+            ['nombre' => 'MEDICATURA RURAL', 'parroquia_id' => 935],
+            ['nombre' => 'PLAZA', 'parroquia_id' => 935],
+
+            // Bolivia (ID: 939)
+            ['nombre' => 'CAS PIEDRA AZUL', 'parroquia_id' => 939],
+
+            // Carrillo (ID: 940)
+            ['nombre' => 'HACIENDA EL CACAO', 'parroquia_id' => 940],
+
+            // Chejendé (ID: 942)
+            ['nombre' => 'CHEJENDE', 'parroquia_id' => 942],
+            ['nombre' => 'FLOR DE PATRIA CHEJENDE', 'parroquia_id' => 942],
+            ['nombre' => 'MONAY LOS SILOS DE MONAY', 'parroquia_id' => 942],
+
+            // San José (ID: 944)
+            ['nombre' => 'LAS LLANADAS', 'parroquia_id' => 944],
+
+            // Carache (ID: 945)
+            ['nombre' => 'CUERPO DE BOMBEROS', 'parroquia_id' => 945],
+            ['nombre' => 'E/S', 'parroquia_id' => 945],
+            ['nombre' => 'PLAZA BOLIVAR DE CARACHE', 'parroquia_id' => 945],
+
+            // _Cuicas (ID: 947)
+            ['nombre' => 'CUICAS', 'parroquia_id' => 947],
+
+            // Escuque (ID: 950)
+            ['nombre' => 'BARQUESIMETICO', 'parroquia_id' => 950],
+            ['nombre' => 'BOBIURES', 'parroquia_id' => 950],
+            ['nombre' => 'CERRAD HOSSO', 'parroquia_id' => 950],
+            ['nombre' => 'EL HIGUERON', 'parroquia_id' => 950],
+            ['nombre' => 'EL TENDAL', 'parroquia_id' => 950],
+            ['nombre' => 'JUAN DIAZ', 'parroquia_id' => 950],
+            ['nombre' => 'LA GARITA', 'parroquia_id' => 950],
+            ['nombre' => 'LA MACARENA', 'parroquia_id' => 950],
+            ['nombre' => 'LAS ROSAS', 'parroquia_id' => 950],
+            ['nombre' => 'LOS POTREROS', 'parroquia_id' => 950],
+            ['nombre' => 'MANUEL SUAREZ', 'parroquia_id' => 950],
+            ['nombre' => 'MEDIA LUNA ABAJO', 'parroquia_id' => 950],
+            ['nombre' => 'MEDIA LUNA ARRIBA', 'parroquia_id' => 950],
+            ['nombre' => 'PIEDRA DEL ZAMURO', 'parroquia_id' => 950],
+            ['nombre' => 'PUERTO ESCONDIDO', 'parroquia_id' => 950],
+            ['nombre' => 'SAN FRANCISCO', 'parroquia_id' => 950],
+            ['nombre' => 'URB COLINAS', 'parroquia_id' => 950],
+            ['nombre' => 'URB EL RINCON', 'parroquia_id' => 950],
+            ['nombre' => 'URB FRANCISCO', 'parroquia_id' => 950],
+            ['nombre' => 'URB LAS LOMAS', 'parroquia_id' => 950],
+            ['nombre' => 'URB RAFAEL RANGEL', 'parroquia_id' => 950],
+            ['nombre' => 'URB TIERRA LINDA', 'parroquia_id' => 950],
+            ['nombre' => 'URB VALLE LINDO', 'parroquia_id' => 950],
+
+            // La Unión El Alto Escuque (ID: 951)
+            ['nombre' => 'CRUZ DE LA MISION', 'parroquia_id' => 951],
+            ['nombre' => 'EL ALTO DE ESCUQUE', 'parroquia_id' => 951],
+            ['nombre' => 'LAGUNETA', 'parroquia_id' => 951],
+            ['nombre' => 'LAS CASITAS', 'parroquia_id' => 951],
+            ['nombre' => 'LAS RURALES', 'parroquia_id' => 951],
+
+            // Sabana Libre (ID: 953)
+            ['nombre' => 'EL PEPO', 'parroquia_id' => 953],
+            ['nombre' => 'URB VISTA HERMOSA', 'parroquia_id' => 953],
+
+            // El Socorro (ID: 954)
+            ['nombre' => 'SIN SECTOR', 'parroquia_id' => 954],
+
+            // Campoelías (ID: 957)
+            ['nombre' => 'CAMPO ELIAS', 'parroquia_id' => 957],
+            ['nombre' => 'CAMPO ELIAS BISCUCUY', 'parroquia_id' => 957],
+
+            // Arnoldo Gabaldón (ID: 958)
+            ['nombre' => 'SANTA APOLONIA', 'parroquia_id' => 958],
+            ['nombre' => 'SABANA DE MENDOZA LA CEIBA', 'parroquia_id' => 958],
+            ['nombre' => 'SANTA APOLONIA', 'parroquia_id' => 958],
+
+            // La Ceiba (ID: 961)
+            ['nombre' => 'LA CEIBA', 'parroquia_id' => 961],
+
+            // Tres de Febrero (ID: 962)
+            ['nombre' => 'TRES DE FEBRERO', 'parroquia_id' => 962],
+
+            // El Dividive (ID: 963)
+            ['nombre' => '1 DE MAYO', 'parroquia_id' => 963],
+            ['nombre' => 'BONITO', 'parroquia_id' => 963],
+            ['nombre' => 'EL GUAYABO', 'parroquia_id' => 963],
+            ['nombre' => 'LAS COCUIZAS', 'parroquia_id' => 963],
+            ['nombre' => 'LAS PALMAS', 'parroquia_id' => 963],
+            ['nombre' => 'TIERRA NEGRA', 'parroquia_id' => 963],
+            ['nombre' => 'URB 12 DE OCTUBRE', 'parroquia_id' => 963],
+            ['nombre' => 'CENTRO', 'parroquia_id' => 963],
+
+            // Agua Santa (ID: 964)
+            ['nombre' => 'ESTADIO', 'parroquia_id' => 964],
+
+            // Agua Caliente (ID: 965)
+            ['nombre' => 'LOCAL 3', 'parroquia_id' => 965],
+
+            // Monte Carmelo (ID: 968)
+            ['nombre' => 'CAS ACARIGUA', 'parroquia_id' => 968],
+            ['nombre' => 'CAS LA CUESTA', 'parroquia_id' => 968],
+            ['nombre' => 'CAS CERRO DE MIRAFLORES', 'parroquia_id' => 968],
+            ['nombre' => 'CEMENTERIO II', 'parroquia_id' => 968],
+            ['nombre' => 'EL CERRITO', 'parroquia_id' => 968],
+            ['nombre' => 'EL JABILLAL', 'parroquia_id' => 968],
+            ['nombre' => 'PLAZA BOLIVAR DE MONTE CARMELO', 'parroquia_id' => 968],
+
+            // Buena Vista (ID: 969)
+            ['nombre' => 'BUENA VISTA', 'parroquia_id' => 969],
+            ['nombre' => 'SABANA GRANDE BUENA VISTA', 'parroquia_id' => 969],
+
+            // Motatán (ID: 971)
+            ['nombre' => 'ALBERTO RAVELL', 'parroquia_id' => 971],
+            ['nombre' => 'CACAO II', 'parroquia_id' => 971],
+            ['nombre' => 'CAUCAIGUITA', 'parroquia_id' => 971],
+            ['nombre' => 'CERRO CAJA DE AGUA', 'parroquia_id' => 971],
+            ['nombre' => 'EL CEMENTERIO', 'parroquia_id' => 971],
+            ['nombre' => 'LA CARIBEA DE MOTATAN', 'parroquia_id' => 971],
+            ['nombre' => 'LA CURVA', 'parroquia_id' => 971],
+            ['nombre' => 'MIRAFLORES', 'parroquia_id' => 971],
+            ['nombre' => 'NUEVO', 'parroquia_id' => 971],
+            ['nombre' => 'PINTO SALINAS', 'parroquia_id' => 971],
+            ['nombre' => 'SAN NICOLAS', 'parroquia_id' => 971],
+            ['nombre' => 'URB DANIEL CANARIAS', 'parroquia_id' => 971],
+            ['nombre' => 'URB GIRALUNA', 'parroquia_id' => 971],
+
+            // Pampán (ID: 974)
+            ['nombre' => 'ALEJANDRO', 'parroquia_id' => 974],
+            ['nombre' => 'ANDRES ELOY BLANCO', 'parroquia_id' => 974],
+            ['nombre' => 'CASA BLANCA', 'parroquia_id' => 974],
+            ['nombre' => 'CERRO MONTE LIBRE', 'parroquia_id' => 974],
+            ['nombre' => 'EL CALVARIO', 'parroquia_id' => 974],
+            ['nombre' => 'EL CANALETE', 'parroquia_id' => 974],
+            ['nombre' => 'EL CARMEN', 'parroquia_id' => 974],
+            ['nombre' => 'EL CUMBRE', 'parroquia_id' => 974],
+            ['nombre' => 'EL PROGRESO', 'parroquia_id' => 974],
+            ['nombre' => 'EL VALLE DE JESUS', 'parroquia_id' => 974],
+            ['nombre' => 'HACIENDA LA TEMPORADA', 'parroquia_id' => 974],
+            ['nombre' => 'LA CORTADORA', 'parroquia_id' => 974],
+            ['nombre' => 'LA CUESTA', 'parroquia_id' => 974],
+            ['nombre' => 'LA FLORIDA', 'parroquia_id' => 974],
+            ['nombre' => 'LA REPRESA', 'parroquia_id' => 974],
+            ['nombre' => 'MARACAIBITO', 'parroquia_id' => 974],
+            ['nombre' => 'RAYA', 'parroquia_id' => 974],
+            ['nombre' => 'SAN BENITO', 'parroquia_id' => 974],
+            ['nombre' => 'SAN FRANCISCO', 'parroquia_id' => 974],
+            ['nombre' => 'URB JOSEFELIX RIBAS', 'parroquia_id' => 974],
+            ['nombre' => 'URB VISTA HERMOSA I', 'parroquia_id' => 974],
+
+            // Flor Depatria (ID: 975)
+            ['nombre' => 'CAMPO LINDOS', 'parroquia_id' => 975],
+            ['nombre' => 'CATALINA', 'parroquia_id' => 975],
+            ['nombre' => 'EL CHAITO', 'parroquia_id' => 975],
+            ['nombre' => 'LA GUACA', 'parroquia_id' => 975],
+            ['nombre' => 'LA MORON', 'parroquia_id' => 975],
+            ['nombre' => 'LA REPRESA', 'parroquia_id' => 975],
+            ['nombre' => 'LOS CERRITOS', 'parroquia_id' => 975],
+            ['nombre' => 'LOS POCITOS', 'parroquia_id' => 975],
+            ['nombre' => 'PABLO LEON', 'parroquia_id' => 975],
+            ['nombre' => 'SAN JOSE', 'parroquia_id' => 975],
+            ['nombre' => 'SAN RAFAEL', 'parroquia_id' => 975],
+            ['nombre' => 'URB ANTONIO NICOLAS BRICENO', 'parroquia_id' => 975],
+            ['nombre' => 'URB LOLA BRICENO', 'parroquia_id' => 975],
+
+            // Lapaz (ID: 976)
+            ['nombre' => 'CAS LA GARITA', 'parroquia_id' => 976],
+            ['nombre' => 'CAS LA VELA', 'parroquia_id' => 976],
+            ['nombre' => 'CAS PALO BLANCO', 'parroquia_id' => 976],
+            ['nombre' => 'FLOR DE PATRIA CHEJENDE', 'parroquia_id' => 976],
+            ['nombre' => 'LA POLLERA', 'parroquia_id' => 976],
+            ['nombre' => 'MARACAIBITO', 'parroquia_id' => 976],
+            ['nombre' => 'MONAY II', 'parroquia_id' => 976],
+            ['nombre' => 'SAN ISIDRO', 'parroquia_id' => 976],
+
+            // Pampanito (ID: 978)
+            ['nombre' => 'CAMBALACHE', 'parroquia_id' => 978],
+            ['nombre' => 'CERRO SANTO DOMINGO', 'parroquia_id' => 978],
+            ['nombre' => 'EL CHORRITO', 'parroquia_id' => 978],
+            ['nombre' => 'EL PINAR', 'parroquia_id' => 978],
+            ['nombre' => 'LA HACIENDITA', 'parroquia_id' => 978],
+            ['nombre' => 'LA MESA', 'parroquia_id' => 978],
+            ['nombre' => 'LA PACCA', 'parroquia_id' => 978],
+            ['nombre' => 'LAS 3 FLORES', 'parroquia_id' => 978],
+            ['nombre' => 'MESA GABALDON', 'parroquia_id' => 978],
+            ['nombre' => 'MESA LOS GABALDONES', 'parroquia_id' => 978],
+            ['nombre' => 'MESA LOS LIMPIOS', 'parroquia_id' => 978],
+            ['nombre' => 'SANTO DOMINGO', 'parroquia_id' => 978],
+            ['nombre' => 'URB EL ROSAL', 'parroquia_id' => 978],
+            ['nombre' => 'URB LA FLORESTAN', 'parroquia_id' => 978],
+            ['nombre' => 'URB LA MILAGROSA', 'parroquia_id' => 978],
+            ['nombre' => 'URB LA MURALLA', 'parroquia_id' => 978],
+            ['nombre' => 'URB LOS RIOS', 'parroquia_id' => 978],
+
+            // La Concepción (ID: 979)
+            ['nombre' => 'CERRO CUBICO', 'parroquia_id' => 979],
+            ['nombre' => 'CERRO EL PRADO', 'parroquia_id' => 979],
+            ['nombre' => 'LA CONCEPCION', 'parroquia_id' => 979],
+            ['nombre' => 'LA PENITA', 'parroquia_id' => 979],
+            ['nombre' => 'URB FERRUCIO BATTISTONE', 'parroquia_id' => 979],
+
+            // Pampanito II (ID: 980)
+            ['nombre' => 'BALN AGUA CLARA', 'parroquia_id' => 980],
+            ['nombre' => 'BUTAQUE', 'parroquia_id' => 980],
+            ['nombre' => 'CERRO LOS CACHOS', 'parroquia_id' => 980],
+            ['nombre' => 'HACIENDA AGUA CLARA', 'parroquia_id' => 980],
+            ['nombre' => 'PALO NEGRO', 'parroquia_id' => 980],
+
+            // Betijoque (ID: 981)
+            ['nombre' => 'CANCHA DEPORTIVA', 'parroquia_id' => 981],
+            ['nombre' => 'CAPILLA SANTISIMA TRINIDAD', 'parroquia_id' => 981],
+            ['nombre' => 'EL CANO', 'parroquia_id' => 981],
+            ['nombre' => 'PARQ LA ABEJITA', 'parroquia_id' => 981],
+            ['nombre' => 'PIEDRA EL ZAMURO', 'parroquia_id' => 981],
+            ['nombre' => 'SAN LUIS PARTE BAJA', 'parroquia_id' => 981],
+            ['nombre' => 'UNEFA BETIJOQUE', 'parroquia_id' => 981],
+
+            // José Gregorio Hernández (ID: 982)
+            ['nombre' => 'AGUA BLANCA', 'parroquia_id' => 982],
+            ['nombre' => 'AMBL S', 'parroquia_id' => 982],
+            ['nombre' => 'BOCA GRANDE', 'parroquia_id' => 982],
+            ['nombre' => 'CRUZ DE LA MISION PARTE ALTA', 'parroquia_id' => 982],
+            ['nombre' => 'EL PRADO', 'parroquia_id' => 982],
+            ['nombre' => 'LAS RURALES', 'parroquia_id' => 982],
+            ['nombre' => 'SAN JUAN', 'parroquia_id' => 982],
+            ['nombre' => 'SAN PEDRO VIEJO', 'parroquia_id' => 982],
+            ['nombre' => 'SANTA EDUVIGIS', 'parroquia_id' => 982],
+            ['nombre' => 'SARA LINDA', 'parroquia_id' => 982],
+            ['nombre' => 'SARA LINDA ABAJO', 'parroquia_id' => 982],
+            ['nombre' => 'URB EL BUEN SAMARITANO', 'parroquia_id' => 982],
+            ['nombre' => 'URB LAS CARMELITAS', 'parroquia_id' => 982],
+
+            // Los Cedros (ID: 984)
+            ['nombre' => 'CERRO MOTATAN', 'parroquia_id' => 984],
+            ['nombre' => 'EL CEDRO', 'parroquia_id' => 984],
+            ['nombre' => 'LA GIRA', 'parroquia_id' => 984],
+            ['nombre' => 'LOS POTREROS', 'parroquia_id' => 984],
+            ['nombre' => 'MESA LOS CANOS', 'parroquia_id' => 984],
+
+            // Carvajal (ID: 985)
+            ['nombre' => 'AGUAS NEGRAS', 'parroquia_id' => 985],
+            ['nombre' => 'CARVAJAL', 'parroquia_id' => 985],
+            ['nombre' => 'EL AMPARO', 'parroquia_id' => 985],
+            ['nombre' => 'HOTEL FLAMINGO', 'parroquia_id' => 985],
+            ['nombre' => 'LA CABECERA', 'parroquia_id' => 985],
+            ['nombre' => 'LA HORQUETA', 'parroquia_id' => 985],
+            ['nombre' => 'LA MESETA', 'parroquia_id' => 985],
+            ['nombre' => 'SAN GENARO', 'parroquia_id' => 985],
+            ['nombre' => 'SANTA ROSA', 'parroquia_id' => 985],
+
+            // Campo Alegre (ID: 986)
+            ['nombre' => 'CAMPO ALEGRE', 'parroquia_id' => 986],
+            ['nombre' => 'CANTARRANA', 'parroquia_id' => 986],
+            ['nombre' => 'EL LIMON I', 'parroquia_id' => 986],
+            ['nombre' => 'LA CALLEJUELA', 'parroquia_id' => 986],
+
+            // Antonio Nicolás Briceño (ID: 987)
+            ['nombre' => 'ALDEA EB INTEGRAL JULIO SANCHEZ VIVAS', 'parroquia_id' => 987],
+            ['nombre' => 'CANCHA', 'parroquia_id' => 987],
+            ['nombre' => 'CEMENTERIO', 'parroquia_id' => 987],
+            ['nombre' => 'E/S CANARIAS', 'parroquia_id' => 987],
+            ['nombre' => 'E/S POV', 'parroquia_id' => 987],
+            ['nombre' => 'ESTADIO', 'parroquia_id' => 987],
+            ['nombre' => 'FARM LA CEJITA', 'parroquia_id' => 987],
+            ['nombre' => 'MAKRO VALERA', 'parroquia_id' => 987],
+            ['nombre' => 'PLAZA BOLIVAR', 'parroquia_id' => 987],
+            ['nombre' => 'PREFECTURA', 'parroquia_id' => 987],
+
+            // Sabana de Mendoza (ID: 989)
+            ['nombre' => 'CARLOS ANDRES PEREZ', 'parroquia_id' => 989],
+            ['nombre' => 'SIMON BOLIVAR', 'parroquia_id' => 989],
+            ['nombre' => 'URB SAN ALEJO', 'parroquia_id' => 989],
+            ['nombre' => 'ZARAGOZA', 'parroquia_id' => 989],
+
+            // Junín (ID: 990)
+            ['nombre' => 'JUNIN', 'parroquia_id' => 990],
+            ['nombre' => 'SABANA DE MENDOZA LA CEIBA', 'parroquia_id' => 990],
+
+            // Valmore Rodríguez (ID: 991)
+            ['nombre' => 'CLUB ANDES MAGICOS', 'parroquia_id' => 991],
+            ['nombre' => 'FARM DON BOSCO', 'parroquia_id' => 991],
+            ['nombre' => 'HOTEL DONA VENERA', 'parroquia_id' => 991],
+            ['nombre' => 'HOTEL EL BULEVAR', 'parroquia_id' => 991],
+            ['nombre' => 'HUGO SUAREZ', 'parroquia_id' => 991],
+            ['nombre' => 'MODULO DE TRANSITO', 'parroquia_id' => 991],
+
+            // Andrés Linares (ID: 993)
+            ['nombre' => 'CARMONA', 'parroquia_id' => 993],
+            ['nombre' => 'MUSABAS', 'parroquia_id' => 993],
+
+            // Chiquinquirá (ID: 994)
+            ['nombre' => 'CADELA', 'parroquia_id' => 994],
+            ['nombre' => 'CAMARGO', 'parroquia_id' => 994],
+            ['nombre' => 'CASA CULT', 'parroquia_id' => 994],
+            ['nombre' => 'CC DON PEDRO', 'parroquia_id' => 994],
+            ['nombre' => 'CNE', 'parroquia_id' => 994],
+            ['nombre' => 'CUARTEL RIVAS DAVILA', 'parroquia_id' => 994],
+            ['nombre' => 'CURVA DE TUCUTUCO', 'parroquia_id' => 994],
+            ['nombre' => 'EL CARMEN', 'parroquia_id' => 994],
+            ['nombre' => 'EL HATICO', 'parroquia_id' => 994],
+            ['nombre' => 'EL LIMON', 'parroquia_id' => 994],
+            ['nombre' => 'FARM LA PAZ II', 'parroquia_id' => 994],
+            ['nombre' => 'FARM MIRABEL II', 'parroquia_id' => 994],
+            ['nombre' => 'FARM SANTA ROSA', 'parroquia_id' => 994],
+            ['nombre' => 'FUNDASALUD', 'parroquia_id' => 994],
+            ['nombre' => 'HOSP JOSE HERNANDEZ', 'parroquia_id' => 994],
+            ['nombre' => 'LA TUNA', 'parroquia_id' => 994],
+            ['nombre' => 'PARAMITO', 'parroquia_id' => 994],
+            ['nombre' => 'PARQ CRISTOBAL MENDOZA', 'parroquia_id' => 994],
+            ['nombre' => 'PLAZA ANDRES BELLO', 'parroquia_id' => 994],
+            ['nombre' => 'SAN ISIDRO', 'parroquia_id' => 994],
+            ['nombre' => 'SANTA ROSA', 'parroquia_id' => 994],
+            ['nombre' => 'UE CARRILLO GUERRA', 'parroquia_id' => 994],
+            ['nombre' => 'URB CONTICINIO', 'parroquia_id' => 994],
+            ['nombre' => 'URB EL HATICO', 'parroquia_id' => 994],
+
+            // Cristóbal Mendoza (ID: 995)
+            ['nombre' => 'CERRO MISION', 'parroquia_id' => 995],
+            ['nombre' => 'EL CEMENTERIO', 'parroquia_id' => 995],
+            ['nombre' => 'EL VERSAL', 'parroquia_id' => 995],
+            ['nombre' => 'LA ARBOLEDA', 'parroquia_id' => 995],
+            ['nombre' => 'LA MONTANITA', 'parroquia_id' => 995],
+            ['nombre' => 'LA PLAYA', 'parroquia_id' => 995],
+            ['nombre' => 'LA REPRESA', 'parroquia_id' => 995],
+            ['nombre' => 'MESA GALLARDA', 'parroquia_id' => 995],
+            ['nombre' => 'SAN JACINTO', 'parroquia_id' => 995],
+            ['nombre' => 'SAN JOSE DE HERES', 'parroquia_id' => 995],
+            ['nombre' => 'SANTA BARBARA', 'parroquia_id' => 995],
+            ['nombre' => 'URB LA PAZ', 'parroquia_id' => 995],
+            ['nombre' => 'URB LOS MUCUES', 'parroquia_id' => 995],
+
+            // Matriz (ID: 997)
+            ['nombre' => 'BARRANCA', 'parroquia_id' => 997],
+            ['nombre' => 'CAS TIMIRIS', 'parroquia_id' => 997],
+            ['nombre' => 'EL CARRILLO', 'parroquia_id' => 997],
+            ['nombre' => 'EL CERRITO', 'parroquia_id' => 997],
+            ['nombre' => 'EL CHURRU', 'parroquia_id' => 997],
+            ['nombre' => 'EL ZAMURO', 'parroquia_id' => 997],
+            ['nombre' => 'LA GENOSA', 'parroquia_id' => 997],
+            ['nombre' => 'LAS ACORITAS', 'parroquia_id' => 997],
+            ['nombre' => 'LAS DELICIAS', 'parroquia_id' => 997],
+            ['nombre' => 'PLAZA CARABOBO', 'parroquia_id' => 997],
+            ['nombre' => 'PLAZA BARRETO UZCATEGUI', 'parroquia_id' => 997],
+            ['nombre' => 'PLAZA EL PARQUE', 'parroquia_id' => 997],
+            ['nombre' => 'TIMIRIS', 'parroquia_id' => 997],
+            ['nombre' => 'URB EL RECREO', 'parroquia_id' => 997],
+            ['nombre' => 'URB LA VEGA', 'parroquia_id' => 997],
+            ['nombre' => 'URB TIMIRIS', 'parroquia_id' => 997],
+
+            // Monseñor Carrillo (ID: 998)
+            ['nombre' => 'BORBON BAJO', 'parroquia_id' => 998],
+            ['nombre' => 'CAS VILITA', 'parroquia_id' => 998],
+            ['nombre' => 'CEMENTERIO', 'parroquia_id' => 998],
+            ['nombre' => 'CERRO LA GUIRRA', 'parroquia_id' => 998],
+            ['nombre' => 'CERRO SANTA ANA', 'parroquia_id' => 998],
+            ['nombre' => 'EL CARMEN', 'parroquia_id' => 998],
+            ['nombre' => 'HACIENDA MAMATOYA', 'parroquia_id' => 998],
+            ['nombre' => 'LAS ARAUJAS', 'parroquia_id' => 998],
+            ['nombre' => 'NUEVO', 'parroquia_id' => 998],
+            ['nombre' => 'POTRERITO', 'parroquia_id' => 998],
+            ['nombre' => 'SABANETA', 'parroquia_id' => 998],
+            ['nombre' => 'SAN JACINTO', 'parroquia_id' => 998],
+            ['nombre' => 'SAN JOSE', 'parroquia_id' => 998],
+            ['nombre' => 'TAMBORON', 'parroquia_id' => 998],
+            ['nombre' => 'TIERRA MORADA', 'parroquia_id' => 998],
+            ['nombre' => 'TRUJILLO', 'parroquia_id' => 998],
+            ['nombre' => 'URB CARACAS', 'parroquia_id' => 998],
+            ['nombre' => 'URB DON TOBIAS', 'parroquia_id' => 998],
+            ['nombre' => 'URB MIRABEL', 'parroquia_id' => 998],
+            ['nombre' => 'URB RIO CASTAN', 'parroquia_id' => 998],
+            ['nombre' => 'CENTRO', 'parroquia_id' => 998],
+
+            // Tres Esquinas (ID: 999)
+            ['nombre' => 'CERRO ISNOGUE', 'parroquia_id' => 999],
+            ['nombre' => 'CERRO MIRABEL', 'parroquia_id' => 999],
+            ['nombre' => 'CUBICUS', 'parroquia_id' => 999],
+            ['nombre' => 'FILA LAS CHIAPAS', 'parroquia_id' => 999],
+            ['nombre' => 'LA AGUADITA', 'parroquia_id' => 999],
+            ['nombre' => 'TRES ESQUINAS', 'parroquia_id' => 999],
+
+            // Jajó (ID: 1001)
+            ['nombre' => 'JAJO', 'parroquia_id' => 1001],
+
+            // La Mesa de Esnujaque (ID: 1002)
+            ['nombre' => 'SANTIAGO', 'parroquia_id' => 1002],
+
+            // Tuñame (ID: 1003)
+            ['nombre' => 'SANTIAGO', 'parroquia_id' => 1003],
+
+            // La Quebrada (ID: 1004)
+            ['nombre' => 'LA QUEBRADA', 'parroquia_id' => 1004],
+
+            // Juan Ignacio Montilla (ID: 1005)
+            ['nombre' => 'BELLA VISTA', 'parroquia_id' => 1005],
+            ['nombre' => 'BOTIQUERIA (BOLIVAR)', 'parroquia_id' => 1005],
+            ['nombre' => 'C/RES LA SEVILLANA', 'parroquia_id' => 1005],
+            ['nombre' => 'CC DARCA', 'parroquia_id' => 1005],
+            ['nombre' => 'CC LAS ACACIAS', 'parroquia_id' => 1005],
+            ['nombre' => 'CITY HALL DISCOTHEQUE', 'parroquia_id' => 1005],
+            ['nombre' => 'COLEGIO SALESIANO SANTO TOMAS DE AQUINO', 'parroquia_id' => 1005],
+            ['nombre' => 'CURAZAO', 'parroquia_id' => 1005],
+            ['nombre' => 'DIGITELS', 'parroquia_id' => 1005],
+            ['nombre' => 'DIGITELB', 'parroquia_id' => 1005],
+            ['nombre' => 'EL RIO', 'parroquia_id' => 1005],
+            ['nombre' => 'FARM ICAQUE', 'parroquia_id' => 1005],
+            ['nombre' => 'FARM LEVI', 'parroquia_id' => 1005],
+            ['nombre' => 'FARM MAXI MEDICA', 'parroquia_id' => 1005],
+            ['nombre' => 'IGLESIA SAN PEDRO', 'parroquia_id' => 1005],
+            ['nombre' => 'MC DONALD S VALERA', 'parroquia_id' => 1005],
+            ['nombre' => 'METROPOLIS', 'parroquia_id' => 1005],
+            ['nombre' => 'ML DON PEPE VALERA', 'parroquia_id' => 1005],
+            ['nombre' => 'PLAZA SUCRE', 'parroquia_id' => 1005],
+            ['nombre' => 'PLAZA VALERA', 'parroquia_id' => 1005],
+            ['nombre' => 'SUBWAY (VALERA)', 'parroquia_id' => 1005],
+            ['nombre' => 'TEATRO AVENIDA', 'parroquia_id' => 1005],
+            ['nombre' => 'UE JOSEFA DEL GALLEGO', 'parroquia_id' => 1005],
+            ['nombre' => 'URB 120 CASAS', 'parroquia_id' => 1005],
+            ['nombre' => 'URB BELLA VISTA', 'parroquia_id' => 1005],
+            ['nombre' => 'URB COUNTRY', 'parroquia_id' => 1005],
+            ['nombre' => 'URB LAS 52 CASAS', 'parroquia_id' => 1005],
+            ['nombre' => 'URB LIBERTADOR', 'parroquia_id' => 1005],
+
+            // La Beatriz (ID: 1006)
+            ['nombre' => 'EL CUMBE', 'parroquia_id' => 1006],
+            ['nombre' => 'URB LA BEATRIZ', 'parroquia_id' => 1006],
+
+            // Lapuerta (ID: 1007)
+            ['nombre' => 'CAS CARORITA', 'parroquia_id' => 1007],
+            ['nombre' => 'CAS EL MOLINO', 'parroquia_id' => 1007],
+            ['nombre' => 'CAS EL TENDAL', 'parroquia_id' => 1007],
+            ['nombre' => 'CAS LOS BARRIALES', 'parroquia_id' => 1007],
+            ['nombre' => 'CAS VALERA ALTA', 'parroquia_id' => 1007],
+            ['nombre' => 'CERRO EL LLANO', 'parroquia_id' => 1007],
+            ['nombre' => 'CERRO PIEDRA BLANCA', 'parroquia_id' => 1007],
+            ['nombre' => 'EL CRUCE', 'parroquia_id' => 1007],
+            ['nombre' => 'EL CEMENTERIO', 'parroquia_id' => 1007],
+            ['nombre' => 'FILA LA CORDILLERA', 'parroquia_id' => 1007],
+            ['nombre' => 'FINCA EL POZO', 'parroquia_id' => 1007],
+            ['nombre' => 'FINCA EL TENDAL', 'parroquia_id' => 1007],
+            ['nombre' => 'FINCA VIRGEN DEL CARMEN', 'parroquia_id' => 1007],
+            ['nombre' => 'LA ESCALA', 'parroquia_id' => 1007],
+            ['nombre' => 'LA FLECHA', 'parroquia_id' => 1007],
+            ['nombre' => 'LAS DELICIAS PARTE BAJA', 'parroquia_id' => 1007],
+            ['nombre' => 'SAN PEDRO', 'parroquia_id' => 1007],
+            ['nombre' => 'SANTA BARBARA', 'parroquia_id' => 1007],
+            ['nombre' => 'TOPO LOS TORRES', 'parroquia_id' => 1007],
+            ['nombre' => 'URB EL MOLINO', 'parroquia_id' => 1007],
+            ['nombre' => 'URB GUADALUPE', 'parroquia_id' => 1007],
+            ['nombre' => 'URB LA NEBLINA', 'parroquia_id' => 1007],
+            ['nombre' => 'URB VIRGEN DE LA PAZ', 'parroquia_id' => 1007],
+
+            // Mendoza del Valle de Momboy (ID: 1008)
+            ['nombre' => 'CAS BELLA VISTA', 'parroquia_id' => 1008],
+            ['nombre' => 'CAS CONCHA DE MIRA', 'parroquia_id' => 1008],
+            ['nombre' => 'CAS LA PUEBLITA', 'parroquia_id' => 1008],
+            ['nombre' => 'CAS LA TAPA', 'parroquia_id' => 1008],
+            ['nombre' => 'CAS LAS DELICIOS PARTE ALTA', 'parroquia_id' => 1008],
+            ['nombre' => 'CAS MESA LARGA', 'parroquia_id' => 1008],
+            ['nombre' => 'CAS SAN PABLO', 'parroquia_id' => 1008],
+            ['nombre' => 'EL CEMENTERIO', 'parroquia_id' => 1008],
+            ['nombre' => 'EL CUCHARITO', 'parroquia_id' => 1008],
+            ['nombre' => 'EL LLANO', 'parroquia_id' => 1008],
+            ['nombre' => 'EL OLIMPO', 'parroquia_id' => 1008],
+            ['nombre' => 'LA CANADA', 'parroquia_id' => 1008],
+            ['nombre' => 'LAS GUAMAS', 'parroquia_id' => 1008],
+            ['nombre' => 'LOS CERRILLOS PARTE BAJA', 'parroquia_id' => 1008],
+            ['nombre' => 'LOS SALECIANOS', 'parroquia_id' => 1008],
+            ['nombre' => 'SAN FRANCISCO', 'parroquia_id' => 1008],
+            ['nombre' => 'SAN PABLO PARTE ALTA', 'parroquia_id' => 1008],
+            ['nombre' => 'URB SAN ISIDRO', 'parroquia_id' => 1008],
+            ['nombre' => 'URB SANTA RITA', 'parroquia_id' => 1008],
+
+            // Mercedes Díaz (ID: 1009)
+            ['nombre' => '5 DE MAYO', 'parroquia_id' => 1009],
+            ['nombre' => 'MERCEDES DIAZ', 'parroquia_id' => 1009],
+            ['nombre' => 'CERRO LEON', 'parroquia_id' => 1009],
+            ['nombre' => 'EL BOLO', 'parroquia_id' => 1009],
+            ['nombre' => 'LA CABANA', 'parroquia_id' => 1009],
+            ['nombre' => 'LA PLAZA', 'parroquia_id' => 1009],
+            ['nombre' => 'LA CIENAGA', 'parroquia_id' => 1009],
+            ['nombre' => 'LA FLORESTA', 'parroquia_id' => 1009],
+            ['nombre' => 'LA PENITA', 'parroquia_id' => 1009],
+            ['nombre' => 'LOS ANESADOS', 'parroquia_id' => 1009],
+            ['nombre' => 'LOS BAMBUES', 'parroquia_id' => 1009],
+            ['nombre' => 'MANANTIALES', 'parroquia_id' => 1009],
+            ['nombre' => 'MIRAFLORES', 'parroquia_id' => 1009],
+            ['nombre' => 'MORON', 'parroquia_id' => 1009],
+            ['nombre' => 'NUEVO', 'parroquia_id' => 1009],
+            ['nombre' => 'SAN ANTONIO', 'parroquia_id' => 1009],
+            ['nombre' => 'SAN ISIDRO', 'parroquia_id' => 1009],
+            ['nombre' => 'SAN JOSE', 'parroquia_id' => 1009],
+            ['nombre' => 'SANTA ELENA', 'parroquia_id' => 1009],
+            ['nombre' => 'SANTA MARIA', 'parroquia_id' => 1009],
+            ['nombre' => 'URB LA PLATA', 'parroquia_id' => 1009],
+            ['nombre' => 'VISTA ALEGRE', 'parroquia_id' => 1009],
+
+            // San Luis (ID: 1010)
+            ['nombre' => 'LAS NIGUAS', 'parroquia_id' => 1010],
+            ['nombre' => 'SAN LUIS', 'parroquia_id' => 1010],
+            ['nombre' => 'SANTA BARBARA', 'parroquia_id' => 1010],
+            ['nombre' => 'URB ANDRES ELOY BLANCO', 'parroquia_id' => 1010],
+            ['nombre' => 'ZONA INDUSTRIAL', 'parroquia_id' => 1010],
+
+            
         ];
     }
 }
