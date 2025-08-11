@@ -360,20 +360,27 @@ return [
         ],
         ['header' => 'CONFIGURACIÓN DE USUARIO'],
         [
-            'text' => 'Usuarios',
-            'url' => '/usuarios',
-            'icon' => 'far fa-users fa-fw',
+            'text' => 'Configuracion',
+            'icon' => 'fas fa-fw fa-cog',
+            'submenu' => [
+                [
+                    'text' => 'Usuarios',
+                    'url' => '/usuarios',
+                    'icon' => 'far fa-users fa-fw',
+                ],
+                [
+                    'text' => 'Permisos',
+                    'url' => '/permisos',
+                    'icon' => 'fas fa-user-check',
+                ],
+                [
+                    'text' => 'Roles',
+                    'url' => '/roles',
+                    'icon' => 'fas fa-user-check',
+                ],
+            ],
         ],
-        [
-            'text' => 'Permisos',
-            'url' => '/permisos',
-            'icon' => 'fas fa-user-check',
-        ],
-        [
-            'text' => 'Roles',
-            'url' => '/roles',
-            'icon' => 'fas fa-user-check',
-        ],
+        
         /* 
         [
             'text' => 'change_password',
