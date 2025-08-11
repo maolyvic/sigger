@@ -1,33 +1,31 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\RoleController;
-use App\Http\Controllers\TransitoController;
-use App\Http\Controllers\NoTransitoController;
-use App\Http\Controllers\InVivoController;
-use App\Http\Controllers\PostmortemController;
-use App\Http\Controllers\ReporteController;
-use App\Http\Controllers\PermisosController;
-use Illuminate\Support\Facades\Auth;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
 
 Route::get('/', function () {
-    return redirect()->route('login');
+    return view('welcome');
 });
 
-Auth::routes();
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::group(['middleware' => ['auth']], function () { 
-    Route::resource('usuarios', UserController::class)->names('usuarios');
-    Route::resource('permisos', PermisosController::class)->names('permisos');
-    Route::resource('roles', RoleController::class)->names('roles');
-    Route::resource('reportes', ReporteController::class)->names('reportes');
-    Route::resource('transito', TransitoController::class)->names('transito');
-    Route::resource('notransito', NoTransitoController::class)->names('notransito');
-    Route::resource('invivo', InVivoController::class)->names('invivo');
-    Route::resource('postmortem', PostmortemController::class)->names('postmortem');
-    Route::resource('roles', RoleController::class)->names('roles');
- });
+require __DIR__.'/auth.php';
