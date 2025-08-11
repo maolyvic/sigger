@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SectorSeeder extends Seeder
 {
@@ -12,7 +13,7 @@ class SectorSeeder extends Seeder
      */
     public function run(): void
     {
-        $sector = [
+        $sectores = [
             ['nombre' => 'CASERIO CULEBRA', 'parroquia_id' => 2],
             ['nombre' => 'MAWISHIÑA', 'parroquia_id' => 2],
             ['nombre' => 'LA ESMERALDA', 'parroquia_id' => 2],
@@ -14938,5 +14939,7 @@ class SectorSeeder extends Seeder
             ['nombre' => 'VECINDARIO LOS TEQUES', 'parroquia_id' => 1130],
 
         ];
+
+        DB::table('sectores')->insert($sectores);
     }
 }
