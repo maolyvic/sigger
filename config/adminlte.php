@@ -380,6 +380,38 @@ return [
                 ],
             ],
         ],
+        ['header' => 'CONFIGURACIÓN DE LA APLICACIÓN'],
+        [
+            'text' => 'Ubicaciones',
+            'icon' => 'fas fa-map-marker-alt',
+            'submenu' => [
+                [
+                    'text' => 'Redips',
+                    'url' => '/redips',
+                    'icon' => 'fas fa-network-wired',
+                ],
+                [
+                    'text' => 'Estados',
+                    'url' => '/estados',
+                    'icon' => 'fas fa-flag',
+                ],
+                [
+                    'text' => 'Parroquias',
+                    'url' => '/parroquias',
+                    'icon' => 'fas fa-church',
+                ],
+                [
+                    'text' => 'Sectores',
+                    'url' => '/sectores',
+                    'icon' => 'fas fa-layer-group',
+                ],
+                [
+                    'text' => 'Sedes',
+                    'url' => '/sedes',
+                    'icon' => 'fas fa-building',
+                ],
+            ],
+        ],
         
         /* 
         [
