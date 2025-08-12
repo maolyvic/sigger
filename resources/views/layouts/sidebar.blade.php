@@ -1,7 +1,43 @@
 <div class="flex-shrink-0 w-64 bg-gray-800 text-white flex flex-col">
-    <!-- Logo o Nombre del Sistema -->
-    <div class="h-16 flex items-center justify-center text-2xl font-bold">
-        <a href="{{ route('dashboard') }}">SIGGER</a>
+    <!-- Logo y Botones de Acción -->
+    <div class="h-16 flex items-center justify-between px-4">
+
+        <!-- Logo del Sistema -->
+        <a href="{{ route('dashboard') }}" class="text-2xl font-bold">
+            SIGGER
+        </a>
+
+        <!-- Grupo de Botones de Acción -->
+        <div class="flex items-center space-x-2">
+
+            <!-- Botón de Configuración -->
+            <a href="#" {{-- TODO: Cambiar por la ruta real, ej: route('settings.index') --}}
+                class="p-2 rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                aria-label="Configuración">
+
+                <!-- Icono de Engranaje (Heroicons) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                    <path d="M10 3.75a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17.25 4.5a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM5 3.75a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 .75.75ZM4.25 17a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM17.25 17a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM9 10a.75.75 0 0 1-.75.75h-5.5a.75.75 0 0 1 0-1.5h5.5A.75.75 0 0 1 9 10ZM17.25 10.75a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM14 10a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM10 16.25a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
+                </svg>
+
+
+            </a>
+
+            <!-- Botón de Logout -->
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit"
+                    class="p-2 rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                    aria-label="Salir del Sistema">
+
+                    <!-- Icono de Salida (Heroicons) -->
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                    </svg>
+                </button>
+            </form>
+
+        </div>
     </div>
 
     <!-- Menú de Navegación -->
@@ -66,18 +102,4 @@
         </div>
     </nav>
 
-    <!-- Sección de Logout -->
-    <div class="mt-auto p-4">
-        <form method="POST" action="{{ route('logout') }}">
-            @csrf
-            <a href="{{ route('logout') }}"
-                onclick="event.preventDefault(); this.closest('form').submit();"
-                class="flex items-center w-full px-4 py-2 rounded-md text-red-300 hover:bg-red-700 hover:text-white">
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                </svg>
-                <span class="mx-4 font-medium">Salir del Sistema</span>
-            </a>
-        </form>
-    </div>
 </div>
