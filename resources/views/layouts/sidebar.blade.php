@@ -14,6 +14,30 @@
 
         <!-- Sección de Operaciones Core -->
         <h3 class="px-4 mt-4 mb-2 text-xs uppercase text-gray-400">Operaciones</h3>
+        <!-- ============================================================== -->
+        <!-- ===== INICIO DEL NUEVO DESPLEGABLE: Causa de Muerte =========== -->
+        <!-- ============================================================== -->
+        <div x-data="{ open: {{ request()->routeIs('causas.*') ? 'true' : 'false' }} }">
+            {{-- Botón que controla el desplegable --}}
+            <button @click="open = !open" class="w-full flex justify-between items-center px-4 py-2 rounded-md hover:bg-gray-700 focus:outline-none {{ request()->routeIs('causas.*') ? 'bg-gray-900' : '' }}">
+                <span class="mx-4 font-medium">Causa de Muerte</span>
+                <svg class="h-5 w-5 transform transition-transform duration-200" :class="{ 'rotate-180': open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+
+            {{-- Contenido del desplegable --}}
+            <div x-show="open" x-transition class="mt-2 space-y-1 pl-8 pr-2">
+                <a href="#" {{-- TODO: Cambiar por la ruta real, ej: {{ route('causas.transito') }} --}}
+                    class="block w-full text-left px-4 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white {{ request()->routeIs('causas.transito') ? 'bg-gray-700' : '' }}">
+                    Tránsito
+                </a>
+                <a href="#" {{-- TODO: Cambiar por la ruta real, ej: {{ route('causas.notransito') }} --}}
+                    class="block w-full text-left px-4 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white {{ request()->routeIs('causas.notransito') ? 'bg-gray-700' : '' }}">
+                    No Tránsito
+                </a>
+            </div>
+        </div>
 
         <!-- {{-- Se inicializa el estado con Alpine.js. 'open' será true si alguna ruta de evaluación está activa --}} -->
         <div x-data="{ open: {{ request()->routeIs('evaluaciones.*') ? 'true' : 'false' }} }">
