@@ -1,11 +1,12 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SettingsController; // <-- 1. AÑADE ESTA LÍNEA
+use App\Http\Controllers\SettingsController; 
 use App\Http\Controllers\Location\MunicipioController;
 use App\Http\Controllers\Location\ParroquiaController;
 use App\Http\Controllers\Location\SectorController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Location\RedipController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('municipios', MunicipioController::class);
         Route::resource('parroquias', ParroquiaController::class);
         Route::resource('sectores', SectorController::class);
+        Route::resource('redips', RedipController::class);
     });
 });
 
