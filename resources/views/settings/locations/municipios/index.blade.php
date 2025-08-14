@@ -1,10 +1,8 @@
 <x-app-layout>
     @push('scripts')
-        <!-- Estilos de DataTables -->
+        <!-- Estilos y Scripts de Datatables -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-        <!-- jQuery (DataTables lo necesita) -->
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-        <!-- JavaScript de DataTables -->
         <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     @endpush
 
@@ -13,7 +11,10 @@
             {{ __('Configuración de Locaciones') }}
         </h2>
     </x-slot>
-    <x-settings-tabs active="municipios" />
+
+    {{-- He cambiado el 'active' para que coincida con el desplegable de locaciones, puedes ajustarlo --}}
+    <x-settings-tabs active="locaciones" />
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
 
@@ -32,6 +33,29 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6">
 
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-lg font-medium text-gray-900">Lista de Municipios</h3>
+                        <a href="{{ route('settings.locations.municipios.create') }}"
+                            class="inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Crear Municipio
+                        </a>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="estado-filter" class="block text-sm font-medium text-gray-700">Filtrar por
+                            Estado</label>
+                        <select id="estado-filter"
+                            class="mt-1 block w-full md:w-1/3 rounded-md border-gray-300 shadow-sm">
+                            <option value="">Todos los Estados</option>
+                            @isset($estados)
+                                @foreach ($estados as $estado)
+                                    <option value="{{ $estado->nombre }}">{{ $estado->nombre }}</option>
+                                @endforeach
+                            @endisset
+                        </select>
+                    </div>
+
+
                     <table id="municipios-table" class="display min-w-full">
                         <thead>
                             <tr>
@@ -45,14 +69,10 @@
                                 <tr>
                                     <td>{{ $municipio->nombre }}</td>
                                     <td>{{ $municipio->estado?->nombre ?? 'Sin Estado Asignado' }}</td>
-
                                     <td>
-
-                                        <div class="flex items-center space-x-4 ">
-                                            {{-- Botón de Editar --}}
-                                            <a href="#" class="text-indigo-600 hover:text-indigo-900">Editar</a>
-
-                                            {{-- Formulario de Borrado --}}
+                                        <div class="flex items-center space-x-4">
+                                            <a href="{{ route('settings.locations.municipios.edit', $municipio->id) }}"
+                                                class="text-indigo-600 hover:text-indigo-900">Editar</a>
                                             <form
                                                 action="{{ route('settings.locations.municipios.destroy', $municipio->id) }}"
                                                 method="POST"
@@ -65,7 +85,6 @@
                                             </form>
                                         </div>
                                     </td>
-
                                 </tr>
                             @endforeach
                         </tbody>
@@ -74,7 +93,6 @@
             </div>
         </div>
     </div>
-
     @push('scripts')
         <script>
             $(document).ready(function() {
