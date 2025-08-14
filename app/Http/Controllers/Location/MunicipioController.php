@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Location;
 
 use App\Http\Controllers\Controller;
-use App\Models\Estado; 
+use App\Models\Estado;
 use App\Models\Municipio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -12,19 +12,24 @@ class MunicipioController extends Controller
 {
     public function index()
     {
-        // Pasamos todos los municipios a la vista principal
-        // $municipios = Municipio::with('estado')->latest()->get();
+        // 1. Usamos tu consulta personalizada con el Query Builder
         $municipios = DB::table('municipios')
             ->join('estados', 'municipios.estados_id', '=', 'estados.id')
             ->select('municipios.*', 'estados.nombre as estado_nombre')
             ->orderBy('municipios.nombre')
             ->get()
             ->map(function ($item) {
+                // Esta parte es clave: Recreas la estructura $municipio->estado->nombre
+                // que la vista espera.
                 $item->estado = (object) ['nombre' => $item->estado_nombre];
                 return $item;
             });
-        // dd($municipios);
-        return view('settings.locations.municipios.index', compact('municipios'));
+
+        // 2. También necesitamos obtener todos los estados para el filtro
+        $estados = Estado::orderBy('nombre')->get();
+
+        // 3. Pasamos ambas variables a la vista
+        return view('settings.locations.municipios.index', compact('municipios', 'estados'));
     }
 
     public function create()
@@ -45,5 +50,4 @@ class MunicipioController extends Controller
 
         return redirect()->route('settings.locations.municipios.index')->with('success', 'Municipio creado con éxito.');
     }
-
 }
