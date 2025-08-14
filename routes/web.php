@@ -1,12 +1,12 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SettingsController; 
+use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\Location\MunicipioController;
 use App\Http\Controllers\Location\ParroquiaController;
 use App\Http\Controllers\Location\SectorController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Location\RedipController; 
+use App\Http\Controllers\Location\RedipController;
 use App\Http\Controllers\Location\EstadoController;
 
 /*
@@ -27,8 +27,9 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
+})
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -37,13 +38,17 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
 
-    Route::prefix('settings/locations')->name('settings.locations.')->group(function () {
-        Route::resource('municipios', MunicipioController::class);
-        Route::resource('estados', EstadoController::class);
-        Route::resource('parroquias', ParroquiaController::class);
-        Route::resource('sectores', SectorController::class);
-        Route::resource('redips', RedipController::class);
-    });
+    Route::prefix('settings/locations')
+        ->name('settings.locations.')
+        ->group(function () {
+            Route::resource('municipios', MunicipioController::class);
+            Route::resource('estados', EstadoController::class);
+            Route::resource('parroquias', ParroquiaController::class);
+            Route::resource('sectores', SectorController::class)->parameters([
+                'sectores' => 'sector',
+            ]);
+            Route::resource('redips', RedipController::class);
+        });
 });
 
 require __DIR__ . '/auth.php';
