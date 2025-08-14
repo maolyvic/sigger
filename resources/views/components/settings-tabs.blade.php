@@ -1,13 +1,13 @@
 @props(['active'])
 
 <nav class="flex space-x-2">
-    
+
     <!-- Botón General -->
-    <a href="#" 
+    <a href="{{ route('settings.index') }}"
        @class([
-           'px-4 py-2 font-medium text-sm rounded-md', // Clases base para todos los botones
-           'bg-blue-600 text-white' => $active === 'general', // Estilo ACTIVO: Fondo azul, texto blanco
-           'text-gray-700 bg-white hover:bg-gray-100 border' => $active !== 'general' // Estilo INACTIVO: Fondo blanco, texto oscuro
+           'px-4 py-2 font-medium text-sm rounded-md',
+           'bg-blue-600 text-white' => $active === 'general',
+           'text-gray-700 bg-white hover:bg-gray-100 border' => $active !== 'general'
        ])>
         General
     </a>
@@ -18,7 +18,7 @@
         <button @click="open = !open"
                 @class([
                     'inline-flex items-center px-4 py-2 font-medium text-sm rounded-md w-full',
-                    'bg-blue-600 text-white' => request()->routeIs('settings.locations.*'), // Se activa para cualquier ruta de locaciones
+                    'bg-blue-600 text-white' => request()->routeIs('settings.locations.*'),
                     'text-gray-700 bg-white hover:bg-gray-100 border' => !request()->routeIs('settings.locations.*')
                 ])>
             <span>Locaciones</span>
@@ -34,6 +34,35 @@
              style="display: none;"
              class="absolute z-10 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none origin-top-left">
             <div class="py-1">
+                
+                <!-- ============================================== -->
+                <!-- ===== INICIO DE LOS NUEVOS ENLACES AÑADIDOS ==== -->
+                <!-- ============================================== -->
+
+                <!-- NUEVO ENLACE: Redips -->
+                <a href="#" {{-- TODO: Cambiar por route('settings.locations.redips.index') --}}
+                   @class([
+                       'block px-4 py-2 text-sm',
+                       'bg-gray-100 text-gray-900' => request()->routeIs('settings.locations.redips.*'),
+                       'text-gray-700 hover:bg-gray-100 hover:text-gray-900' => !request()->routeIs('settings.locations.redips.*')
+                   ])>
+                    Redips
+                </a>
+                
+                <!-- NUEVO ENLACE: Estados -->
+                <a href="#" {{-- TODO: Cambiar por route('settings.locations.estados.index') --}}
+                   @class([
+                       'block px-4 py-2 text-sm',
+                       'bg-gray-100 text-gray-900' => request()->routeIs('settings.locations.estados.*'),
+                       'text-gray-700 hover:bg-gray-100 hover:text-gray-900' => !request()->routeIs('settings.locations.estados.*')
+                   ])>
+                    Estados
+                </a>
+
+                <!-- ============================================== -->
+                <!-- ====== FIN DE LOS NUEVOS ENLACES AÑADIDOS ====== -->
+                <!-- ============================================== -->
+
                 <a href="{{ route('settings.locations.municipios.index') }}"
                    @class([
                        'block px-4 py-2 text-sm',
