@@ -44,6 +44,7 @@ Route::middleware('auth')->group(function () {
             Route::resource('municipios', MunicipioController::class);
             Route::resource('estados', EstadoController::class);
             Route::resource('parroquias', ParroquiaController::class);
+            Route::get('sectores/data', [SectorController::class, 'getData'])->name('sectores.data');
             Route::resource('sectores', SectorController::class)->parameters([
                 'sectores' => 'sector',
             ]);

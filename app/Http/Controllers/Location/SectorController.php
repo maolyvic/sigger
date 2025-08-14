@@ -9,15 +9,48 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
-
+use Yajra\DataTables\Facades\DataTables;
 class SectorController extends Controller
 {
     public function index()
     {
-        $sectores = Sector::with('parroquia')->orderBy('nombre')->get();
 
-        return view('settings.locations.sectores.index', compact('sectores'));
+        return view('settings.locations.sectores.index');
     }
+    public function getData()
+    {
+        // 2. Inicia la consulta con la relación para ser eficiente (Eager Loading).
+        $query = Sector::with('parroquia');
+
+        // 3. Usa el paquete para procesar la consulta y construir la respuesta.
+        return DataTables::of($query)
+            ->editColumn('parroquia', function ($sector) {
+                // Formatea la columna para mostrar el nombre de la parroquia.
+                return $sector->parroquia?->nombre ?? 'N/A';
+            })
+            ->addColumn('action', function ($sector) {
+                // Genera el HTML para los botones de acción usando el estilo que definiste.
+                $editUrl = route('settings.locations.sectores.edit', $sector->id);
+                $destroyUrl = route('settings.locations.sectores.destroy', $sector->id);
+
+                return '
+                    <div class="flex items-center space-x-4">
+                        <a href="' . $editUrl . '" class="text-indigo-600 hover:text-indigo-900">Editar</a>
+                        <form action="' . $destroyUrl . '" method="POST" onsubmit="return confirm(\'¿Estás seguro?\');">
+                            ' . csrf_field() . '
+                            ' . method_field('DELETE') . '
+                            <button type="submit" class="text-red-600 hover:text-red-900">Borrar</button>
+                        </form>
+                    </div>
+                ';
+            })
+            // Le dice a Datatables que la columna 'action' es HTML y no debe ser escapada.
+            ->rawColumns(['action'])
+            ->make(true);
+    }
+
+
+
 
     public function create()
     {
