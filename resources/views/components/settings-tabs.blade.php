@@ -49,14 +49,14 @@
                     Redips
                 </a>
 
-                <!-- NUEVO ENLACE: Estados -->
-                <a href="#" {{-- TODO: Cambiar por route('settings.locations.estados.index') --}} @class([
-                    'block px-4 py-2 text-sm',
-                    'bg-gray-100 text-gray-900' => request()->routeIs(
-                        'settings.locations.estados.*'),
-                    'text-gray-700 hover:bg-gray-100 hover:text-gray-900' => !request()->routeIs(
-                        'settings.locations.estados.*'),
-                ])>
+                <a href="{{ route('settings.locations.estados.index') }}" {{-- <-- CAMBIA ESTE href --}}
+                    @class([
+                        'block px-4 py-2 text-sm',
+                        'bg-gray-100 text-gray-900' => request()->routeIs(
+                            'settings.locations.estados.*'),
+                        'text-gray-700 hover:bg-gray-100 hover:text-gray-900' => !request()->routeIs(
+                            'settings.locations.estados.*'),
+                    ])>
                     Estados
                 </a>
 

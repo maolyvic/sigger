@@ -7,6 +7,7 @@ use App\Http\Controllers\Location\ParroquiaController;
 use App\Http\Controllers\Location\SectorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Location\RedipController; 
+use App\Http\Controllers\Location\EstadoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,7 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('settings/locations')->name('settings.locations.')->group(function () {
         Route::resource('municipios', MunicipioController::class);
+        Route::resource('estados', EstadoController::class);
         Route::resource('parroquias', ParroquiaController::class);
         Route::resource('sectores', SectorController::class);
         Route::resource('redips', RedipController::class);
