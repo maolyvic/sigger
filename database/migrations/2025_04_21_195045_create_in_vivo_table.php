@@ -25,6 +25,7 @@ return new class extends Migration
             $table->integer('examen_histologico')->nullable();
             $table->integer('examen_citologico')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

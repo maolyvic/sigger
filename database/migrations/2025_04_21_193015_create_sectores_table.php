@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('sectores', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->foreignId('parroquia_id')->constrained('parroquias')->onDelete('cascade');
+            $table->foreignId('parroquia_id')->constrained('parroquias');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

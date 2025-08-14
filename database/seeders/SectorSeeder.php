@@ -12712,7 +12712,7 @@ class SectorSeeder extends Seeder
             ['nombre' => 'E/S', 'parroquia_id' => 945],
             ['nombre' => 'PLAZA BOLIVAR DE CARACHE', 'parroquia_id' => 945],
 
-            // _Cuicas (ID: 947)
+            // Cuicas (ID: 947)
             ['nombre' => 'CUICAS', 'parroquia_id' => 947],
 
             // Escuque (ID: 950)

@@ -4,12 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 // Si usas Soft Deletes para Parroquias, descomenta la siguiente línea y el 'use' de abajo.
 // use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Parroquia extends Model
 {
-    use HasFactory; // , SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $table = 'parroquias';
 

@@ -22,8 +22,8 @@ return new class extends Migration
             $table->softDeletes();
 
             $table->unique('codigo');
-            $table->foreign('redip_id')->references('id')->on('redips')->onDelete('NO ACTION')->onUpdate('NO ACTION');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('NO ACTION')->onUpdate('NO ACTION');
+            $table->foreign('redip_id')->references('id')->on('redips');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

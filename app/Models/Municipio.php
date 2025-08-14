@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Municipio extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     /**
      * La tabla asociada con el modelo.

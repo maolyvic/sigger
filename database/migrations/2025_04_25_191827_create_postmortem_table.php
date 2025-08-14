@@ -33,6 +33,7 @@ return new class extends Migration
             $table->integer('quimicas_evidencia_biologica')->nullable();
             $table->integer('quimicos_botanica_evidencia_biologica')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
