@@ -60,10 +60,6 @@
                     Estados
                 </a>
 
-                <!-- ============================================== -->
-                <!-- ====== FIN DE LOS NUEVOS ENLACES AÑADIDOS ====== -->
-                <!-- ============================================== -->
-
                 <a href="{{ route('settings.locations.municipios.index') }}" @class([
                     'block px-4 py-2 text-sm',
                     'bg-gray-100 text-gray-900' => request()->routeIs(
@@ -73,13 +69,14 @@
                 ])>
                     Municipios
                 </a>
-                <a href="{{ route('settings.locations.parroquias.index') }}" @class([
-                    'block px-4 py-2 text-sm',
-                    'bg-gray-100 text-gray-900' => request()->routeIs(
-                        'settings.locations.parroquias.*'),
-                    'text-gray-700 hover:bg-gray-100 hover:text-gray-900' => !request()->routeIs(
-                        'settings.locations.parroquias.*'),
-                ])>
+                <a href="{{ route('settings.locations.parroquias.index') }}" {{-- <-- CAMBIA ESTE href --}}
+                    @class([
+                        'block px-4 py-2 text-sm',
+                        'bg-gray-100 text-gray-900' => request()->routeIs(
+                            'settings.locations.parroquias.*'),
+                        'text-gray-700 hover:bg-gray-100 hover:text-gray-900' => !request()->routeIs(
+                            'settings.locations.parroquias.*'),
+                    ])>
                     Parroquias
                 </a>
                 <a href="{{ route('settings.locations.sectores.index') }}" @class([

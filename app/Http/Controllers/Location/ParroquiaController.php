@@ -3,63 +3,86 @@
 namespace App\Http\Controllers\Location;
 
 use App\Http\Controllers\Controller;
+use App\Models\Parroquia;
+use App\Models\Municipio; // ¡Importante! Necesitamos los Municipios
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\Rule;
 
 class ParroquiaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $parroquias = Parroquia::with('municipio')->orderBy('nombre')->get();
+        return view('settings.locations.parroquias.index', compact('parroquias'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        $municipios = Municipio::orderBy('nombre')->get();
+        return view('settings.locations.parroquias.create', compact('municipios'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre' => 'required|string|max:255',
+            // La regla 'unique' ahora debe considerar el municipio_id para permitir parroquias con el mismo nombre en diferentes municipios
+            'municipio_id' => 'required|exists:municipios,id',
+        ]);
+
+        try {
+            DB::transaction(function () use ($request) {
+                Parroquia::create([
+                    'nombre' => strtoupper($request->input('nombre')),
+                    'municipio_id' => $request->input('municipio_id'),
+                ]);
+            });
+            return redirect()->route('settings.locations.parroquias.index')->with('success', 'Parroquia creada con éxito.');
+        } catch (\Exception $e) {
+            Log::error('Error al crear Parroquia: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Hubo un error al crear la Parroquia.')->withInput();
+        }
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function edit(Parroquia $parroquia)
     {
-        //
+        $municipios = Municipio::orderBy('nombre')->get();
+        return view('settings.locations.parroquias.edit', compact('parroquia', 'municipios'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function update(Request $request, Parroquia $parroquia)
     {
-        //
+        $request->validate([
+            'nombre' => ['required', 'string', 'max:255'],
+            'municipio_id' => 'required|exists:municipios,id',
+        ]);
+
+        try {
+            DB::transaction(function () use ($request, $parroquia) {
+                $parroquia->update([
+                    'nombre' => strtoupper($request->input('nombre')),
+                    'municipio_id' => $request->input('municipio_id'),
+                ]);
+            });
+            return redirect()->route('settings.locations.parroquias.index')->with('success', 'Parroquia actualizada con éxito.');
+        } catch (\Exception $e) {
+            Log::error('Error al actualizar Parroquia ID ' . $parroquia->id . ': ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Hubo un error al actualizar la Parroquia.')->withInput();
+        }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function destroy(Parroquia $parroquia)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        try {
+            DB::transaction(function () use ($parroquia) {
+                $parroquia->delete();
+            });
+            return redirect()->route('settings.locations.parroquias.index')->with('success', 'Parroquia eliminada con éxito.');
+        } catch (\Exception $e) {
+            Log::error('Error al eliminar Parroquia ID ' . $parroquia->id . ': ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Hubo un error al eliminar la Parroquia.');
+        }
     }
 }
