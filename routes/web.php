@@ -5,23 +5,19 @@ use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\Location\MunicipioController;
 use App\Http\Controllers\Location\ParroquiaController;
 use App\Http\Controllers\Location\SectorController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Location\RedipController;
 use App\Http\Controllers\Location\EstadoController;
+use App\Http\Controllers\CausaMuerte\TransitoController;
+use App\Http\Controllers\Api\LocationController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
 */
 
 Route::get('/', function () {
-    // return view('welcome');
     return redirect()->route('login');
 });
 
@@ -36,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    // --- RUTAS DE CONFIGURACIÓN ---
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
 
     Route::prefix('settings/locations')
@@ -45,10 +42,23 @@ Route::middleware('auth')->group(function () {
             Route::resource('estados', EstadoController::class);
             Route::resource('parroquias', ParroquiaController::class);
             Route::get('sectores/data', [SectorController::class, 'getData'])->name('sectores.data');
-            Route::resource('sectores', SectorController::class)->parameters([
-                'sectores' => 'sector',
-            ]);
+            Route::resource('sectores', SectorController::class);
             Route::resource('redips', RedipController::class);
+        });
+
+    // --- RUTAS DE CAUSA DE MUERTE ---
+    Route::get('causa-muerte/transito/data', [TransitoController::class, 'getData'])->name('causa_muerte.transito.data');
+    Route::resource('causa-muerte/transito', TransitoController::class)->names('causa_muerte.transito');
+
+    // ==========================================================
+    // =====      API PARA DROPDOWNS ANIDADOS (CORREGIDA)   =====
+    // ==========================================================
+    Route::prefix('api/locations') // Todas las rutas de API empezarán con /api/locations
+        ->name('api.locations.')
+        ->group(function () {
+            Route::get('/estados/{estado}/municipios', [LocationController::class, 'getMunicipios'])->name('getMunicipios');
+            Route::get('/municipios/{municipio}/parroquias', [LocationController::class, 'getParroquias'])->name('getParroquias');
+            Route::get('/parroquias/{parroquia}/sectores', [LocationController::class, 'getSectores'])->name('getSectores');
         });
 });
 

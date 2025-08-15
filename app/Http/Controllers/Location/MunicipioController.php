@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Location;
 use App\Http\Controllers\Controller;
 use App\Models\Estado;
 use App\Models\Municipio;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log; // <-- Opcional, para registrar errores
@@ -83,9 +84,9 @@ class MunicipioController extends Controller
             DB::transaction(function () use ($municipio) {
 
                 // PASO 1: EJECUTAR LA OPERACIÓN DE BORRADO
-                // Como tu modelo Municipio usa el trait `SoftDeletes`,
+                // Como tu modelo Municipio usa el trait 'SoftDeletes',
                 // esta llamada no borrará el registro permanentemente.
-                // En su lugar, establecerá la fecha y hora en la columna `deleted_at`.
+                // En su lugar, establecerá la fecha y hora en la columna 'deleted_at'.
                 $municipio->delete();
 
                 // Si necesitaras hacer otras operaciones (como registrar un log de auditoría),
@@ -135,6 +136,14 @@ class MunicipioController extends Controller
         // PASO 4: REDIRIGIR CON UN MENSAJE DE ÉXITO
         return redirect()->route('settings.locations.municipios.index')
                          ->with('success', 'Municipio actualizado correctamente');
+    }
+
+    public function show(Municipio $municipio): JsonResponse
+    {
+        $municipios = Municipio::with('estado')->orderBy('nombre')->get();
+
+        // 2. Devuelve la colección como JSON.
+        return response()->json($municipios);
     }
     
 }

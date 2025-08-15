@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes; 
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Estado extends Model
 {
-    use HasFactory, SoftDeletes; 
+    use HasFactory, SoftDeletes;
 
     /**
      * La tabla asociada con el modelo.
@@ -22,12 +22,7 @@ class Estado extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'codigo',
-        'nombre',
-        'redip_id',
-        'user_id',
-    ];
+    protected $fillable = ['codigo', 'nombre', 'redip_id', 'user_id'];
 
     // =================================================================
     // RELACIONES
@@ -46,9 +41,11 @@ class Estado extends Model
      */
     public function municipios()
     {
-        return $this->hasMany(Municipio::class);
+        // Le indicamos explícitamente a Eloquent que la clave foránea
+        // en la tabla 'municipios' se llama 'estados_id'.
+        return $this->hasMany(Municipio::class, 'estados_id');
     }
-    
+
     /**
      * Un Estado fue creado/modificado por un Usuario.
      */

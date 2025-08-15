@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -20,19 +19,18 @@ return new class extends Migration
             $table->enum('delito', ['HOMICIDIO', 'SUICIDIO', 'INTERVENCIÓN LEGAL', 'A DETERMINAR', 'RESPONSABILIDAD PROFESIONAL', 'TRÁNSITO', 'NATURAL', 'ACCIDENTAL']);
             $table->enum('causa_muerte', ['HXAF', 'HXAB', 'A DETERMINAR', 'AHORCADO', 'POLITRAUMATISMO', 'NATURAL', 'AHOGADO', 'QUEMADO', 'ELECTROCUTADO', 'HIPOTERMÍA', 'ASFIXIA MÉCANICA', 'ESTRANGULAMIENTO', 'ENVENENAMIENTO']);
             $table->enum('mecanismo_causa_muerte', ['CAÍDA DE ALTURA', 'CAÍDA DE SUS PROPIOS PIES', 'OBJETO CONTUNDENTE', 'ARROLLAMIENTO DE METRO', 'LINCHAMIENTO', 'INHALACIÓN DE GASES', 'TRAUMA TÉRMICO', 'APLASTAMIENTO', 'TERREMOTO', 'ACCIDENTE AÉREO', 'INUNDACIÓN', 'RAYOS', 'INCENDIO', 'INTOXICACIÓN EXÓGENA', 'EXPLOSIÓN', 'ACCIDENTE DE TRÁNSITO', 'ABALANZAMIENTO', 'TAPIADO', 'SE DESCONOCE', 'ASFIXIA MÉCANICA', 'OTROS']);
-            $table->enum('tipo_vehiculo', ['AUTOMÓVIL', 'MOTO', 'CAMIONETA', 'CAMIÓN', 'NO', 'POR DETERMINAR'])->nullable();
+            $table->enum('tipo_vehiculo', ['AUTOMÓVIL', 'MOTO', 'CAMIONETA', 'CAMIÓN', 'NO', 'AEREO', 'POR DETERMINAR'])->nullable();
             $table->date('fecha_suceso_transito')->nullable();
             $table->date('fecha_ingreso_cadaver');
             $table->time('hora'); // Cambiado a 'time' para mayor precisión
-            
-            
+
             $table->foreignId('estado_id')->constrained('estados');
 
             $table->foreignId('municipio_id')->constrained('municipios');
 
             $table->foreignId('parroquia_id')->constrained('parroquias');
 
-            $table->foreignId('sector_id')->constrained('sectores');
+            $table->foreignId('sector_id')->nullable()->constrained('sectores');
 
             $table->string('direccion_exacta');
             $table->enum('categorizacion_referencias', ['BARRIO O CASERÍO', 'CENTRO DE SALUD', 'CENTRO PENITENCIARIO', 'GRAN MISIÓN VIVIENDA VENEZUELA (GMVV)', 'HOTEL O POSADA', 'INSTALACIONES DEL ESTADO VENEZOLANO', 'INTERIOR DE VEHÍCULO', 'URBANIZACIÓN O CONJUNTO RESIDENCIAL', 'VÍA PÚBLICA', 'OTROS']);
@@ -54,7 +52,7 @@ return new class extends Migration
             $table->text('observaciones')->nullable();
 
             $table->foreignId('user_id')->constrained('users');
-            
+
             $table->timestamps();
             $table->softDeletes();
         });

@@ -64,8 +64,8 @@
 
             {{-- Contenido del desplegable --}}
             <div x-show="open" x-transition class="mt-2 space-y-1 pl-8 pr-2">
-                <a href="#" {{-- TODO: Cambiar por la ruta real, ej: {{ route('causas.transito') }} --}}
-                    class="block w-full text-left px-4 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white {{ request()->routeIs('causas.transito') ? 'bg-gray-700' : '' }}">
+                <a href="{{ route('causa_muerte.transito.index') }}" 
+                   class="block w-full text-left px-4 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white {{ request()->routeIs('causa_muerte.transito.*') ? 'bg-gray-700' : '' }}">
                     Tránsito
                 </a>
                 <a href="#" {{-- TODO: Cambiar por la ruta real, ej: {{ route('causas.notransito') }} --}}
@@ -86,7 +86,7 @@
             </button>
 
             {{-- Contenido del desplegable.
-         `pl-8` indenta todo el bloque de sub-enlaces para una jerarquía clara. --}}
+         'pl-8' indenta todo el bloque de sub-enlaces para una jerarquía clara. --}}
             <div x-show="open" x-transition class="mt-2 space-y-1 pl-8 pr-2">
 
                 <a href="#" {{-- TODO: Cambiar por la ruta real, ej: {{ route('evaluaciones.invivo') }} --}}

@@ -38,7 +38,7 @@ class Municipio extends Model
      */
     public function estado()
     {
-        // Laravel buscará la clave foránea `estado_id` en la tabla `municipios`.
+        // Laravel buscará la clave foránea 'estado_id' en la tabla 'municipios'.
         return $this->belongsTo(Estado::class);
     }
 
