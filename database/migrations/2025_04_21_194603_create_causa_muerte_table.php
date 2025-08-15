@@ -23,11 +23,17 @@ return new class extends Migration
             $table->enum('tipo_vehiculo', ['AUTOMÓVIL', 'MOTO', 'CAMIONETA', 'CAMIÓN', 'NO', 'POR DETERMINAR'])->nullable();
             $table->date('fecha_suceso_transito')->nullable();
             $table->date('fecha_ingreso_cadaver');
-            $table->integer('hora');
-            $table->enum('estado', ['AMAZONAS', 'ANZOÁTEGUI', 'APURE', 'ARAGUA', 'BARINAS', 'BOLÍVAR', 'CARABOBO', 'COJEDES', 'DELTA_AMACURO', 'DISTRITO_CAPITAL', 'FALCÓN', 'GUÁRICO', 'LARA', 'MÉRIDA', 'MIRANDA', 'MONAGAS', 'NUEVA_ESPARTA', 'PORTUGUESA', 'SUCRE', 'TÁCHIRA', 'TRUJILLO', 'LA_GUAIRA', 'YARACUY', 'ZULIA']);
-            $table->string('municipio');
-            $table->string('parroquia');
-            $table->string('sector');
+            $table->time('hora'); // Cambiado a 'time' para mayor precisión
+            
+            
+            $table->foreignId('estado_id')->constrained('estados');
+
+            $table->foreignId('municipio_id')->constrained('municipios');
+
+            $table->foreignId('parroquia_id')->constrained('parroquias');
+
+            $table->foreignId('sector_id')->constrained('sectores');
+
             $table->string('direccion_exacta');
             $table->enum('categorizacion_referencias', ['BARRIO O CASERÍO', 'CENTRO DE SALUD', 'CENTRO PENITENCIARIO', 'GRAN MISIÓN VIVIENDA VENEZUELA (GMVV)', 'HOTEL O POSADA', 'INSTALACIONES DEL ESTADO VENEZOLANO', 'INTERIOR DE VEHÍCULO', 'URBANIZACIÓN O CONJUNTO RESIDENCIAL', 'VÍA PÚBLICA', 'OTROS']);
             $table->string('nombres_apellidos')->nullable();
@@ -43,15 +49,14 @@ return new class extends Migration
             $table->enum('sitio_donde_laboraba', ['CUERPO DE SEGURIDAD CIUDADANA', 'SERVIDOR PÚBLICO', 'EMPRESA PRIVADA', 'DETENIDO'])->nullable();
             $table->text('descripcion')->nullable();
             $table->date('fecha_dictamen_muerte');
-            $table->integer('hora_dictamen_muerte');
+            $table->time('hora_dictamen_muerte'); // Cambiado a 'time'
             $table->enum('fases_descomposicion', ['FRESCO', 'PUTREFACTO', 'OSAMENTO']);
             $table->text('observaciones')->nullable();
-            $table->bigInteger('user_id')->unsigned()->notNull();
+
+            $table->foreignId('user_id')->constrained('users');
             
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
