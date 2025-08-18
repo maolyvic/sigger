@@ -40,6 +40,7 @@
                                 <th>Nombre del Occiso</th>
                                 <th>Fecha del Suceso</th>
                                 <th>Tipo de Vehículo</th>
+                                <th>Grupo Etario</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -69,6 +70,7 @@
                     { data: 'nombres_apellidos', name: 'nombres_apellidos' },
                     { data: 'fecha_suceso_transito', name: 'fecha_suceso_transito' },
                     { data: 'tipo_vehiculo', name: 'tipo_vehiculo' },
+                    { data: 'grupo_etario', name: 'grupo_etario' },
                     { data: 'action', name: 'action', orderable: false, searchable: false }
                 ],
                 
