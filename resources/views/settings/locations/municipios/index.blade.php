@@ -99,7 +99,7 @@
                 // Inicializa la tabla con Datatables
                 var table = $('#municipios-table').DataTable({
                     language: { // Opcional: Traducción al español
-                        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json',
+                        url: "{{ asset('vendor/datatables/es-ES.json') }}",
                     }
                 });
 

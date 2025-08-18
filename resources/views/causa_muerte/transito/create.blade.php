@@ -253,10 +253,6 @@
         <script>
             function formData() {
                 return {
-                    sexo: '{{ old('sexo') }}',
-                    edad: '{{ old('edad') }}',
-                    medida: '{{ old('edad_medida', 'AÑO (S)') }}',
-                    grupoEtario: '',
 
                     init() {
                         this.calcularGrupoEtario();
