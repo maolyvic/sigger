@@ -68,7 +68,7 @@
                    class="block w-full text-left px-4 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white {{ request()->routeIs('causa_muerte.transito.*') ? 'bg-gray-700' : '' }}">
                     Tránsito
                 </a>
-                <a href="#" {{-- TODO: Cambiar por la ruta real, ej: {{ route('causas.notransito') }} --}}
+                <a href="{{ route('causa_muerte.no_transito.index') }}"
                     class="block w-full text-left px-4 py-2 text-sm rounded-md text-gray-300 hover:bg-gray-700 hover:text-white {{ request()->routeIs('causas.notransito') ? 'bg-gray-700' : '' }}">
                     No Tránsito
                 </a>

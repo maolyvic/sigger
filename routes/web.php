@@ -9,6 +9,7 @@ use App\Http\Controllers\Location\RedipController;
 use App\Http\Controllers\Location\EstadoController;
 use App\Http\Controllers\CausaMuerte\TransitoController;
 use App\Http\Controllers\Api\LocationController;
+use App\Http\Controllers\CausaMuerte\NoTransitoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,9 +51,8 @@ Route::middleware('auth')->group(function () {
     Route::get('causa-muerte/transito/data', [TransitoController::class, 'getData'])->name('causa_muerte.transito.data');
     Route::resource('causa-muerte/transito', TransitoController::class)->names('causa_muerte.transito');
 
-    // ==========================================================
-    // =====      API PARA DROPDOWNS ANIDADOS (CORREGIDA)   =====
-    // ==========================================================
+    Route::get('causa-muerte/no-transito/data', [NoTransitoController::class, 'getData'])->name('causa_muerte.no_transito.data');
+    Route::resource('causa-muerte/no-transito', NoTransitoController::class)->names('causa_muerte.no_transito');
     Route::prefix('api/locations') // Todas las rutas de API empezarán con /api/locations
         ->name('api.locations.')
         ->group(function () {
