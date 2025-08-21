@@ -11,7 +11,7 @@ use App\Http\Controllers\CausaMuerte\TransitoController;
 use App\Http\Controllers\Api\LocationController;
 use App\Http\Controllers\CausaMuerte\NoTransitoController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Evaluaciones\InvivoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,6 +60,10 @@ Route::middleware('auth')->group(function () {
             Route::get('/municipios/{municipio}/parroquias', [LocationController::class, 'getParroquias'])->name('getParroquias');
             Route::get('/parroquias/{parroquia}/sectores', [LocationController::class, 'getSectores'])->name('getSectores');
         });
+    Route::prefix('evaluaciones')->name('evaluaciones.')->group(function () {
+        Route::get('invivo/data', [InvivoController::class, 'getData'])->name('invivo.data');
+        Route::resource('invivo', InvivoController::class);
+    });
 });
 
 require __DIR__ . '/auth.php';

@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('huellas_mordeduras')->nullable();
             $table->integer('examen_histologico')->nullable();
             $table->integer('examen_citologico')->nullable();
+            $table->foreignId('user_id'); // Relación con el usuario que crea el registro
             $table->timestamps();
             $table->softDeletes();
         });
